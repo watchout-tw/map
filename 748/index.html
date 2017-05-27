@@ -34,7 +34,7 @@
     </header>
     <section id="atlas">
       <div class="map map-world">
-        <div v-for="row in map.rows">{{ row.what }}</div>
+        <div v-for="row in map.rows">{{ row.what }} {{ row.lat }} {{ row.lng }}</div>
       </div>
     </section>
     <section id="conclusion" class="textgroup">

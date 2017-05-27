@@ -3,10 +3,12 @@ import csv
 import json
 import requests
 
-# prepare google maps
-import config
-import googlemaps
-gmaps = googlemaps.Client(key=config.key)
+import time
+
+# prepare geocoder
+from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut
+geolocator = Nominatim()
 
 url = 'https://docs.google.com/spreadsheets/d/1j_CpObaa3OxJvjfwVfJGfhbK07rmAq8063IMpVV9AFY/pub?output=csv'
 response = requests.get(url)
@@ -17,12 +19,17 @@ rows = list(reader)
 # dump = [row for row in rows]
 dump = []
 for row in rows:
-    gmaps_results = gmaps.geocode(row['media_hq_city'] + ' ' + row['media_hq_country'])
-    if(len(gmaps_results) > 0):
-        latlng = gmaps_results.pop(0)['geometry']['location']
-        row['lat'] = latlng['lat']
-        row['lng'] = latlng['lng']
+    address = row['media_hq_city'] + ',' + row['media_hq_country']
+    try:
+        loc = geolocator.geocode(address, timeout=10)
+    except GeocoderTimedOut:
+        print('timeout', address)
+    if(loc != None):
+        print('success', address, loc.latitude, loc.longitude)
+        row['lat'] = loc.latitude
+        row['lng'] = loc.longitude
         dump.append(row)
+    time.sleep(1)
 
 with open('data.json', 'w+', encoding='utf-8') as f:
     json.dump(dump, f, indent=4, ensure_ascii=False)
