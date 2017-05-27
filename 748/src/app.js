@@ -2,8 +2,7 @@ var app = new Vue({
   el: '#app',
   methods: {
     getSuccess: function(response) {
-      var rows = response.body;
-      console.log(rows);
+      this.map.rows = response.body;
     },
     getError: function(response) {
       console.error(response);
@@ -15,6 +14,9 @@ var app = new Vue({
   },
   data: {
     common: CommonData,
+    map: {
+      rows: []
+    },
     header: {
       title: '釋字748號',
       description: '',
