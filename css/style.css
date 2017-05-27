@@ -1,3 +1,65 @@
+/* Colors */
+/* Typography */
+/* Mixin */
+/* Bootstrap breakpoint */
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
 
+body {
+  font-size: 16px; }
+
+header {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+  header > hgroup > h2 {
+    color: #FF5368; }
+  header > .description {
+    margin: 1rem 0; }
+
+h1, h2 {
+  line-height: 1.25em; }
+
+h2.list-item {
+  font-size: 1.5rem;
+  margin: 0; }
+
+.textgroup {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  max-width: 30rem;
+  width: auto; }
+
+/* index page */
+.pages > .page {
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 83, 104, 0.25);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25); }
+
+/* individual pages */
+.authorship {
+  color: #50E3C2; }
+  .authorship > .item > .job {
+    width: 4rem;
+    margin-right: 1rem;
+    opacity: 0.65; }
+  .authorship > .item > .person:not(:last-of-type) {
+    margin-right: 1rem; }
+
+#bridge {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  background: rgba(255, 83, 104, 0.25);
+  text-align: center;
+  font-family: "noto-serif-patch", "source-han-serif-tc", serif;
+  font-weight: bold;
+  font-size: 1.5rem; }
+
+#conclusion > .title {
+  margin: 1rem 0; }
 
 /*# sourceMappingURL=style.css.map */
