@@ -18,12 +18,12 @@
         "media": "BBC",
         "what": "place",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "London",
         "media_hq_country": "UK",
         "link": "http://www.bbc.com/news/world-asia-40012047",
         "contributor": "kuochun",
-        "lat": 54.7023545,
-        "lng": -3.2765752
+        "lat": 51.5073219,
+        "lng": -0.1276473
     },
     {
         "date": "2017-05-24",
@@ -31,12 +31,12 @@
         "media": "NPR",
         "what": "place",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Washington D.C.",
         "media_hq_country": "US",
         "link": "http://www.npr.org/sections/thetwo-way/2017/05/24/529841027/taiwans-high-court-rules-same-sex-marriage-is-legal-in-a-first-for-asia",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 38.8949549,
+        "lng": -77.0366455
     },
     {
         "date": "2017-05-24",
@@ -44,25 +44,25 @@
         "media": "Independent",
         "what": "country",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "London",
         "media_hq_country": "UK",
         "link": "http://www.independent.co.uk/news/world/asia/taiwan-court-same-sex-marriage-asia-first-place-gay-union-recognise-lgbt-rights-homosexual-lesbian-a7752631.html",
         "contributor": "kuochun",
-        "lat": 54.7023545,
-        "lng": -3.2765752
+        "lat": 51.5073219,
+        "lng": -0.1276473
     },
     {
         "date": "2017-05-24",
         "time": "",
-        "media": "Atlantic",
+        "media": "The Atlantic",
         "what": "place",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Washington D.C.",
         "media_hq_country": "US",
         "link": "https://www.theatlantic.com/news/archive/2017/05/taiwans-same-sex-marriage-victory/527946/",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 38.8949549,
+        "lng": -77.0366455
     },
     {
         "date": "2017-05-24",
@@ -70,12 +70,12 @@
         "media": "Washington Post",
         "what": "place",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Washington D.C.",
         "media_hq_country": "US",
         "link": "https://www.washingtonpost.com/world/in-milestone-decision-taiwan-court-rules-in-favor-of-same-sex-marriage/2017/05/24/bf7aa370-405b-11e7-9851-b95c40075207_story.html?utm_term=.733a8baafdd1",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 38.8949549,
+        "lng": -77.0366455
     },
     {
         "date": "2017-05-24",
@@ -83,12 +83,12 @@
         "media": "LA Times",
         "what": "independently administered [island]",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "LA, CA",
         "media_hq_country": "US",
         "link": "http://www.latimes.com/world/la-fg-taiwan-same-sex-marriage-20170524-story.html",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 36.7014631,
+        "lng": -118.7559973
     },
     {
         "date": "2017-05-24",
@@ -122,12 +122,12 @@
         "media": "PBS",
         "what": "country",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Arlington, Virginia",
         "media_hq_country": "US",
         "link": "http://www.pbs.org/newshour/rundown/taiwan-court-clears-sex-marriage-lgbt/",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 38.8903961,
+        "lng": -77.0841584
     },
     {
         "date": "2017-05-24",
@@ -135,12 +135,12 @@
         "media": "The Telegraph",
         "what": "country",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "London",
         "media_hq_country": "UK",
         "link": "http://www.telegraph.co.uk/news/2017/05/24/taiwan-make-landmark-gay-marriage-ruling/",
         "contributor": "kuochun",
-        "lat": 54.7023545,
-        "lng": -3.2765752
+        "lat": 51.5073219,
+        "lng": -0.1276473
     },
     {
         "date": "2017-05-24",
@@ -148,12 +148,12 @@
         "media": "Vox",
         "what": "island",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "New York City",
         "media_hq_country": "US",
         "link": "https://www.vox.com/world/2017/5/24/15685660/taiwan-gay-marriage-same-sex-marriage-legal",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 40.7305991,
+        "lng": -73.9865811
     },
     {
         "date": "2017-05-24",
@@ -161,12 +161,12 @@
         "media": "Chicago Tribune",
         "what": "country",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Chicago",
         "media_hq_country": "US",
         "link": "http://www.chicagotribune.com/news/nationworld/ct-taiwan-same-sex-marriage-20170524-story.html",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 41.8755546,
+        "lng": -87.6244211
     },
     {
         "date": "2017-05-26",
@@ -174,12 +174,12 @@
         "media": "The Sydney Morning Herald",
         "what": "Chinese satellite nation",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Sydney",
         "media_hq_country": "Australia",
         "link": "http://www.smh.com.au/comment/view-from-the-street/taiwan-ruins-our-dumbest-argument-against-marriage-equality-20170525-gwcwn0.html",
         "contributor": "kuochun",
-        "lat": -24.7761085,
-        "lng": 134.755
+        "lat": -33.8548156,
+        "lng": 151.2164539
     },
     {
         "date": "2017-05-25",
@@ -213,12 +213,12 @@
         "media": "Forbes",
         "what": "country",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "New York City",
         "media_hq_country": "US",
         "link": "https://www.forbes.com/sites/ralphjennings/2017/05/23/15-taiwan-judges-will-decide-fate-of-asias-flagship-same-sex-marriage-law/",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 40.7305991,
+        "lng": -73.9865811
     },
     {
         "date": "2017-05-23",
@@ -265,12 +265,12 @@
         "media": "NBC News",
         "what": "government, one of the continent’s most liberal democracies",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "New York City",
         "media_hq_country": "US",
         "link": "http://www.nbcnews.com/news/world/taiwan-court-rules-same-sex-marriage-legal-asia-first-n763931",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 40.7305991,
+        "lng": -73.9865811
     },
     {
         "date": "2017-05-24",
@@ -278,12 +278,12 @@
         "media": "CBS",
         "what": "place",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "New York City",
         "media_hq_country": "US",
         "link": "http://www.cbsnews.com/news/taiwan-same-sex-marriage-constitution-court-ruling-republic-of-china/",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 40.7305991,
+        "lng": -73.9865811
     },
     {
         "date": "2017-05-24",
@@ -304,12 +304,12 @@
         "media": "qz",
         "what": "place, self-governing island, nation",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "New York City",
         "media_hq_country": "US",
         "link": "https://qz.com/990669/a-taiwan-court-just-overturned-a-ban-on-same-sex-marriage-a-landmark-in-gay-rights-for-asia/",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 40.7305991,
+        "lng": -73.9865811
     },
     {
         "date": "2017-05-26",
@@ -317,12 +317,12 @@
         "media": "The Diplomat",
         "what": "country",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Tokyo",
         "media_hq_country": "Japan",
         "link": "http://thediplomat.com/2017/05/taiwans-same-sex-marriage-breakthrough-in-context/",
         "contributor": "kuochun",
-        "lat": 36.5748441,
-        "lng": 139.2394179
+        "lat": 34.2255804,
+        "lng": 139.294774527387
     },
     {
         "date": "2017-05-24",
@@ -356,12 +356,12 @@
         "media": "Huffington Post",
         "what": "self-ruled island, place",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "New York City",
         "media_hq_country": "US",
         "link": "http://www.huffingtonpost.com/entry/taiwan-marriage-equality_us_59257b16e4b0ec129d3100c7",
         "contributor": "kuochun",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 40.7305991,
+        "lng": -73.9865811
     },
     {
         "date": "2017-05-24",
@@ -629,12 +629,12 @@
         "media": "The Washington Times",
         "what": "country",
         "what_in_english": "",
-        "media_hq_city": "Washington, D.C.",
+        "media_hq_city": "Washington D.C.",
         "media_hq_country": "US",
         "link": "http://www.washingtontimes.com/news/2017/may/24/taiwan-constitutional-court-invalidates-countrys-b/",
         "contributor": "kuochun",
-        "lat": 36.29885175,
-        "lng": -82.3591932141095
+        "lat": 38.8949549,
+        "lng": -77.0366455
     },
     {
         "date": "2017-05-24",
@@ -655,12 +655,12 @@
         "media": "Süddeutsche Zeitung",
         "what": "Land",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Munich",
         "media_hq_country": "Germany",
         "link": "http://www.sueddeutsche.de/politik/taiwan-premiere-in-asien-1.3520762",
         "contributor": "chihao",
-        "lat": 51.0834196,
-        "lng": 10.4234469
+        "lat": 48.1371079,
+        "lng": 11.5753822
     },
     {
         "date": "2017-05-24",
@@ -668,12 +668,12 @@
         "media": "Die Zeit",
         "what": "Land",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Hamburg",
         "media_hq_country": "Germany",
         "link": "http://www.zeit.de/politik/ausland/2017-05/taiwan-homo-ehe-gericht-gleichberechtigung",
         "contributor": "chihao",
-        "lat": 51.0834196,
-        "lng": 10.4234469
+        "lat": 53.550341,
+        "lng": 10.000654
     },
     {
         "date": "2017-05-24",
@@ -681,12 +681,12 @@
         "media": "Der Spiegel",
         "what": "Land",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "HafenCity, Hamburg",
         "media_hq_country": "Germany",
         "link": "http://www.spiegel.de/panorama/gesellschaft/taiwan-oberstes-gericht-spricht-sich-fuer-homo-ehe-aus-a-1149200.html",
         "contributor": "chihao",
-        "lat": 51.0834196,
-        "lng": 10.4234469
+        "lat": 53.5429127,
+        "lng": 9.9958346
     },
     {
         "date": "2017-05-24",
@@ -694,12 +694,12 @@
         "media": "Le Parisien",
         "what": "territoire",
         "what_in_english": "territory",
-        "media_hq_city": "",
+        "media_hq_city": "Paris",
         "media_hq_country": "France",
         "link": "http://www.leparisien.fr/flash-actualite-monde/taiwan-decision-historique-de-la-justice-sur-le-mariage-gay-24-05-2017-6978906.php",
         "contributor": "chihao",
-        "lat": 46.603354,
-        "lng": 1.8883335
+        "lat": 48.8566101,
+        "lng": 2.3514992
     },
     {
         "date": "2017-05-24",
@@ -707,12 +707,12 @@
         "media": "Le Monde",
         "what": "pays",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Paris",
         "media_hq_country": "France",
         "link": "http://www.lemonde.fr/asie-pacifique/article/2017/05/24/taiwan-pourrait-reconnaitre-le-mariage-gay_5132851_3216.html",
         "contributor": "chihao",
-        "lat": 46.603354,
-        "lng": 1.8883335
+        "lat": 48.8566101,
+        "lng": 2.3514992
     },
     {
         "date": "2017-05-24",
@@ -720,12 +720,12 @@
         "media": "Le Figaro",
         "what": "territoire",
         "what_in_english": "territory",
-        "media_hq_city": "",
+        "media_hq_city": "Paris",
         "media_hq_country": "France",
         "link": "http://www.lefigaro.fr/international/2017/05/24/01003-20170524ARTFIG00111-taiwan-la-justice-rend-une-decision-historique-en-faveur-du-mariage-gay.php",
         "contributor": "chihao",
-        "lat": 46.603354,
-        "lng": 1.8883335
+        "lat": 48.8566101,
+        "lng": 2.3514992
     },
     {
         "date": "2017-05-25",
@@ -733,12 +733,12 @@
         "media": "CBC",
         "what": "nation",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Toronto, Ontario",
         "media_hq_country": "Canada",
         "link": "http://www.cbc.ca/news/canada/british-columbia/taiwanese-canadians-celebrate-landmark-same-sex-marriage-ruling-1.4131083",
         "contributor": "chihao",
-        "lat": 61.0666922,
-        "lng": -107.991707
+        "lat": 43.6529206,
+        "lng": -79.3849007
     },
     {
         "date": "2017-05-24",
@@ -746,12 +746,12 @@
         "media": "L’Obs",
         "what": "territoire",
         "what_in_english": "territory",
-        "media_hq_city": "",
+        "media_hq_city": "Paris",
         "media_hq_country": "France",
         "link": "http://tempsreel.nouvelobs.com/societe/20170524.AFP3908/taiwan-decision-historique-de-la-justice-sur-le-mariage-gay.html",
         "contributor": "chihao",
-        "lat": 46.603354,
-        "lng": 1.8883335
+        "lat": 48.8566101,
+        "lng": 2.3514992
     },
     {
         "date": "2017-05-24",
@@ -759,12 +759,12 @@
         "media": "L’Express",
         "what": "territoire",
         "what_in_english": "territory",
-        "media_hq_city": "",
+        "media_hq_city": "Paris",
         "media_hq_country": "France",
         "link": "http://www.lexpress.fr/actualite/monde/asie/taiwan-ouvre-la-voie-a-la-legalisation-du-mariage-homosexuel_1911259.html",
         "contributor": "chihao",
-        "lat": 46.603354,
-        "lng": 1.8883335
+        "lat": 48.8566101,
+        "lng": 2.3514992
     },
     {
         "date": "2017-05-24",
@@ -772,12 +772,12 @@
         "media": "La Croix",
         "what": "pays",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Paris",
         "media_hq_country": "France",
         "link": "http://www.la-croix.com/Monde/Asie-et-Oceanie/Taiwan-legaliser-mariage-homosexuel-2017-05-24-1200849798",
         "contributor": "chihao",
-        "lat": 46.603354,
-        "lng": 1.8883335
+        "lat": 48.8566101,
+        "lng": 2.3514992
     },
     {
         "date": "2017-05-22",
@@ -785,12 +785,12 @@
         "media": "Libération",
         "what": "endroit",
         "what_in_english": "place",
-        "media_hq_city": "",
+        "media_hq_city": "Paris",
         "media_hq_country": "France",
         "link": "http://www.liberation.fr/direct/element/taiwan-decision-du-conseil-constitutionnel-attendue-mercredi_64347/",
         "contributor": "chihao",
-        "lat": 46.603354,
-        "lng": 1.8883335
+        "lat": 48.8566101,
+        "lng": 2.3514992
     },
     {
         "date": "2017-05-25",
@@ -798,12 +798,12 @@
         "media": "Libération",
         "what": "pays",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Paris",
         "media_hq_country": "France",
         "link": "http://www.liberation.fr/planete/2017/05/25/mariage-pour-tous-taiwan-ouvre-la-voie-en-asie_1571696",
         "contributor": "chihao",
-        "lat": 46.603354,
-        "lng": 1.8883335
+        "lat": 48.8566101,
+        "lng": 2.3514992
     },
     {
         "date": "2017-05-25",
@@ -811,12 +811,12 @@
         "media": "NHK",
         "what": "-",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Shibuya, Tokyo",
         "media_hq_country": "Japan",
         "link": "http://www3.nhk.or.jp/news/html/20170525/k10010994101000.html",
         "contributor": "chihao",
-        "lat": 36.5748441,
-        "lng": 139.2394179
+        "lat": 35.664752,
+        "lng": 139.698096
     },
     {
         "date": "2017-05-25",
@@ -824,12 +824,12 @@
         "media": "노동자연대",
         "what": "나라",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Seoul",
         "media_hq_country": "Korea",
         "link": "https://wspaper.org/article/18717",
         "contributor": "chihao",
-        "lat": 35.3985008,
-        "lng": 127.937111
+        "lat": 37.5666791,
+        "lng": 126.9782914
     },
     {
         "date": "2017-05-25",
@@ -837,12 +837,12 @@
         "media": "OhmyNews",
         "what": "나라",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Seoul",
         "media_hq_country": "Korea",
         "link": "http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002328493",
         "contributor": "chihao",
-        "lat": 35.3985008,
-        "lng": 127.937111
+        "lat": 37.5666791,
+        "lng": 126.9782914
     },
     {
         "date": "2017-05-25",
@@ -889,12 +889,12 @@
         "media": "OZY",
         "what": "government",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Mountain View, CA",
         "media_hq_country": "US",
         "link": "http://www.ozy.com/presidential-daily-brief/pdb-78690/its-a-yes-78712",
         "contributor": "chihao",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 37.3855745,
+        "lng": -122.0820499
     },
     {
         "date": "2017-05-24",
@@ -902,12 +902,12 @@
         "media": "DR",
         "what": "land",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Copenhagen",
         "media_hq_country": "Denmark",
         "link": "http://www.dr.dk/nyheder/udland/taiwan-bliver-foerste-land-i-asien-til-legalisere-homoaegteskaber",
         "contributor": "chihao",
-        "lat": 55.670249,
-        "lng": 10.3333283
+        "lat": 55.6867243,
+        "lng": 12.5700724
     },
     {
         "date": "2017-05-24",
@@ -915,12 +915,12 @@
         "media": "HBL",
         "what": "land",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Helsinki",
         "media_hq_country": "Finland",
         "link": "https://www.hbl.fi/artikel/taiwan-kan-bli-forst-i-asien-att-godkanna-samkonat-aktenskap/",
         "contributor": "chihao",
-        "lat": 63.2467777,
-        "lng": 25.9209164
+        "lat": 60.1674086,
+        "lng": 24.9425683
     },
     {
         "date": "2017-05-24",
@@ -928,12 +928,12 @@
         "media": "de Volkskrant",
         "what": "land",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Amsterdam",
         "media_hq_country": "The Netherlands",
         "link": "http://www.volkskrant.nl/buitenland/taiwan-zet-als-eerste-land-in-azie-deur-open-voor-homohuwelijk~a4496886/",
         "contributor": "chihao",
-        "lat": 52.23875405,
-        "lng": 5.53543208563548
+        "lat": 52.3745403,
+        "lng": 4.89797550561798
     },
     {
         "date": "2017-05-24",
@@ -941,12 +941,12 @@
         "media": "NRC",
         "what": "land",
         "what_in_english": "country",
-        "media_hq_city": "",
+        "media_hq_city": "Amsterdam",
         "media_hq_country": "The Netherlands",
         "link": "https://www.nrc.nl/nieuws/2017/05/24/taiwan-opent-weg-naar-homohuwelijk-a1560224",
         "contributor": "chihao",
-        "lat": 52.23875405,
-        "lng": 5.53543208563548
+        "lat": 52.3745403,
+        "lng": 4.89797550561798
     },
     {
         "date": "2017-05-24",
@@ -954,12 +954,12 @@
         "media": "Out Magazine",
         "what": "country, self-governing island",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "LA, CA",
         "media_hq_country": "US",
         "link": "http://www.out.com/news-opinion/2017/5/24/taiwan-becomes-first-asian-country-legalize-same-sex-marriage",
         "contributor": "chihao",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 36.7014631,
+        "lng": -118.7559973
     },
     {
         "date": "2017-05-24",
@@ -967,12 +967,12 @@
         "media": "PinkNews",
         "what": "country",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "London",
         "media_hq_country": "UK",
         "link": "http://www.pinknews.co.uk/2017/05/24/taiwan-becomes-first-country-in-asia-to-rule-in-favour-of-same-sex-marriage/",
         "contributor": "chihao",
-        "lat": 54.7023545,
-        "lng": -3.2765752
+        "lat": 51.5073219,
+        "lng": -0.1276473
     },
     {
         "date": "2017-05-24",
@@ -980,12 +980,12 @@
         "media": "Buzzfeed",
         "what": "country",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "New York City",
         "media_hq_country": "US",
         "link": "https://www.buzzfeed.com/lanesainty/taiwanese-court-delivers-landmark-marriage-ruling?utm_term=.ry2AGZA3l#.boxPBgPdX",
         "contributor": "chihao",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 40.7305991,
+        "lng": -73.9865811
     },
     {
         "date": "2017-05-24",
@@ -993,12 +993,12 @@
         "media": "Buzzfeed",
         "what": "country",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "New York City",
         "media_hq_country": "US",
         "link": "https://www.buzzfeed.com/lanesainty/taiwanese-court-delivers-landmark-marriage-ruling?utm_term=.rnAejRegy#.bvQYqbYoj",
         "contributor": "chihao",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 40.7305991,
+        "lng": -73.9865811
     },
     {
         "date": "2017-05-25",
@@ -1006,12 +1006,12 @@
         "media": "Buzzfeed",
         "what": "place",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "New York City",
         "media_hq_country": "US",
         "link": "https://www.buzzfeed.com/lanesainty/taiwan-ruling-a-good-start-for-asia-says-lead-lawyer?utm_term=.ismxX1xn6#.pdgKJ5KMZ",
         "contributor": "chihao",
-        "lat": 39.7837304,
-        "lng": -100.4458824
+        "lat": 40.7305991,
+        "lng": -73.9865811
     },
     {
         "date": "2017-05-24",
@@ -1071,12 +1071,12 @@
         "media": "Times LIVE",
         "what": "place, island",
         "what_in_english": "",
-        "media_hq_city": "",
+        "media_hq_city": "Johannesburg",
         "media_hq_country": "South Africa",
         "link": "http://www.timeslive.co.za/world/2017/05/25/Taiwans-gay-marriage-ruling-raises-hopes-across-Asia",
         "contributor": "chihao",
-        "lat": -28.8166235,
-        "lng": 24.991639
+        "lat": -26.2049999,
+        "lng": 28.049722
     },
     {
         "date": "2017-05-25",
@@ -1090,5 +1090,31 @@
         "contributor": "chihao",
         "lat": -28.8166235,
         "lng": 24.991639
+    },
+    {
+        "date": "2017-05-26",
+        "time": "",
+        "media": "EL PAÍS Brasil",
+        "what": "país",
+        "what_in_english": "country",
+        "media_hq_city": "Madrid",
+        "media_hq_country": "Spain",
+        "link": "http://brasil.elpais.com/brasil/2017/05/24/internacional/1495614393_031714.html",
+        "contributor": "chihao",
+        "lat": 40.4167047,
+        "lng": -3.7035824
+    },
+    {
+        "date": "2017-05-24",
+        "time": "",
+        "media": "Internacional en EL PAÍS",
+        "what": "país",
+        "what_in_english": "country",
+        "media_hq_city": "Madrid",
+        "media_hq_country": "Spain",
+        "link": "http://internacional.elpais.com/internacional/2017/05/24/actualidad/1495614393_031714.html",
+        "contributor": "chihao",
+        "lat": 40.4167047,
+        "lng": -3.7035824
     }
 ]
