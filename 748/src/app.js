@@ -16,10 +16,6 @@ var app = new Vue({
         people: ['洪國鈞', '游知澔'],
       },
       {
-        job: '編輯',
-        people: ['洪國鈞'],
-      },
-      {
         job: '設計開發',
         people: ['游知澔'],
       },
