@@ -33,9 +33,7 @@
       </div>
     </header>
     <section id="atlas">
-      <div class="map map-world">
-        <div v-for="row in map.rows">{{ row.what }} {{ row.lat }} {{ row.lng }}</div>
-      </div>
+      <atlas></atlas>
     </section>
     <section id="conclusion" class="textgroup">
       <h2 class="title">{{ conclusion.title }}</h2>
@@ -63,6 +61,7 @@ ga('send', 'pageview');
   <!-- page-specific scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.8.0/d3.min.js" charset="utf-8"></script>
+  <script src="../src/atlas.js"></script>
   <script src="./src/app.js"></script>
 </body>
 </html>
