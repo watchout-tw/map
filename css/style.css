@@ -70,7 +70,8 @@ h2.list-item {
     .atlas > .draw > svg {
       width: 100%; }
 
-g.quote {
+g.quote > text {
+  line-height: 1.2em;
   text-anchor: middle; }
 
 /*# sourceMappingURL=style.css.map */
