@@ -64,8 +64,12 @@ var mixinAtlas = {
       quotes.enter().append('g').merge(quotes)
         .attr('class', 'quote')
         .makeLabel({
-          maxWidth: 160,
-          lineHeight: this.size.lineHeight
+          maxWidth: 8,
+          padding: {
+            x: 0.5,
+            y: 0.25,
+          },
+          lineHeight: this.size.lineHeight,
         })
         .saveSize()
         .centerCenter()
@@ -111,7 +115,7 @@ var mixinAtlas = {
       var simulation = d3.forceSimulation();
       simulation.force('collide', d3.forceCollide()
         .radius(function(d) {
-          return (d.width + d.height)/3
+          return (d.width + d.height)*0.25
         })
       );
       simulation.force('center', d3.forceCenter()
@@ -181,44 +185,62 @@ d3.selection.prototype.centerCenter = function() {
 }
 d3.selection.prototype.makeLabel = function(options) {
   this.each(function(d) {
-    var el = d3.select(this);
+    var root = d3.select(this);
+    var anchor = root.append('a')
+      .attr('xlink:href', d.link)
+      .attr('target', '_blank');
+
+    var rem = parseInt(root.style('font-size'));
+
+    var el = anchor; // where all the content actually go
     var terms = d.what.split(/,\s*/).reverse();
-    var offset = 1; // put first line of text right below anchor point
-    terms.forEach(function(term) {
+    var offset = {
+      x: options.padding.x,
+      y: options.padding.y + 1/options.lineHeight // put first line of text right below anchor point
+    };
+    terms.forEach(function(term, i) {
       // text wrap: https://bl.ocks.org/mbostock/7555321
       var text = el.append('text')
-        .attr('x', 0)
-        .attr('y', offset*options.lineHeight + 'em')
+        .attr('x', offset.x + 'rem')
+        .attr('y', offset.y*options.lineHeight + 'rem')
       var words = term.split(/\s+/);
       var lineCount = 1;
       var line = [];
       var tspan = text.append('tspan')
-        .attr('x', 0)
+        .attr('x', offset.x + 'rem')
         .attr('dy', 0);
       while(words.length > 0) {
         var word = words.shift();
         line.push(word);
         tspan.text(line.join(' '));
-        if(tspan.node().getComputedTextLength() > options.maxWidth) {
+        if(tspan.node().getComputedTextLength() > options.maxWidth*rem) {
           line.pop();
           tspan.text(line.join(' '));
           line = [word];
           tspan = text.append('tspan')
-            .attr('x', 0)
-            .attr('dy', options.lineHeight + 'em')
+            .attr('x', offset.x + 'rem')
+            .attr('dy', options.lineHeight + 'rem')
             .text(word);
           lineCount++;
         }
       }
-      offset += lineCount;
+      offset.y += lineCount;
+      if(i < terms.length - 1) {
+        el.append('text')
+          .attr('class', 'and')
+          .attr('x', offset.x + 'rem')
+          .attr('dy', offset.y*options.lineHeight + 'rem')
+          .text('還有')
+      }
+      offset.y += 1;
     })
 
     var box = el.node().getBBox(); // getBoundingClientRect() perhaps?
     el.insert('rect', ':first-child')
       .attr('x', 0)
       .attr('y', 0)
-      .attr('width', box.width)
-      .attr('height', box.height)
+      .attr('width', box.width + options.padding.x*rem*2)
+      .attr('height', box.height + options.padding.y*rem*2)
   })
   return this;
 };
@@ -229,4 +251,4 @@ d3.selection.prototype.saveSize = function() {
     d.height = box.height;
   });
   return this;
-}
+};

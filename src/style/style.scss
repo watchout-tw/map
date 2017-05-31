@@ -96,13 +96,18 @@ svg {
     stroke: none;
   }
   g.quote {
-    > rect {
+    rect {
       fill: yellow;
       stroke: none;
       opacity: 0.25;
     }
-    > text {
+    text {
       fill: black;
+      &.and {
+        opacity: 0.5;
+        font-size: 0.75em;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -112,11 +117,11 @@ svg.debug {
     stroke: none;
   }
   g.quote {
-    > rect {
+    rect {
       fill: none;
       stroke: $color-musou;
     }
-    > text {
+    text {
       opacity: 0.25;
     }
   }

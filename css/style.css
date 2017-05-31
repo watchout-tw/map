@@ -73,20 +73,24 @@ h2.list-item {
 svg circle.center {
   fill: none;
   stroke: none; }
-svg g.quote > rect {
+svg g.quote rect {
   fill: yellow;
   stroke: none;
   opacity: 0.25; }
-svg g.quote > text {
+svg g.quote text {
   fill: black; }
+  svg g.quote text.and {
+    opacity: 0.5;
+    font-size: 0.75em;
+    font-weight: bold; }
 
 svg.debug circle.center {
   fill: #FF5368;
   stroke: none; }
-svg.debug g.quote > rect {
+svg.debug g.quote rect {
   fill: none;
   stroke: #FF5368; }
-svg.debug g.quote > text {
+svg.debug g.quote text {
   opacity: 0.25; }
 
 /*# sourceMappingURL=style.css.map */
