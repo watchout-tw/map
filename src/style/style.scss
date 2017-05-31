@@ -91,23 +91,47 @@ h2.list-item {
 }
 
 svg {
+  $transitionDuration: 0.25s;
   circle.center {
     fill: none;
     stroke: none;
   }
   g.quote {
     rect {
-      fill: yellow;
+      fill: $color-musou;
       stroke: none;
       opacity: 0.25;
+      transition: opacity $transitionDuration;
     }
     text {
       fill: black;
-      &.and {
-        opacity: 0.5;
-        font-size: 0.75em;
+      opacity: 0.75;
+      transition: opacity $transitionDuration;
+      &.media {
+        font-size: 0.65rem;
         font-weight: bold;
       }
+      &.and {
+        opacity: 0.5;
+        font-size: 0.75rem;
+        font-weight: bold;
+      }
+    }
+  }
+  g.quote:hover {
+    rect {
+      opacity: 0.85;
+    }
+    text {
+      opacity: 1;
+      &.and {
+        opacity: 0.5;
+      }
+    }
+  }
+  g.quote.yes {
+    rect {
+      fill: $color-watchout;
     }
   }
 }

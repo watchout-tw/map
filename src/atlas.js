@@ -185,7 +185,8 @@ d3.selection.prototype.centerCenter = function() {
 }
 d3.selection.prototype.makeLabel = function(options) {
   this.each(function(d) {
-    var root = d3.select(this);
+    var root = d3.select(this)
+      .classed('yes', /country/.test(d.what))
     var anchor = root.append('a')
       .attr('xlink:href', d.link)
       .attr('target', '_blank');
@@ -193,11 +194,12 @@ d3.selection.prototype.makeLabel = function(options) {
     var rem = parseInt(root.style('font-size'));
 
     var el = anchor; // where all the content actually go
-    var terms = d.what.split(/,\s*/).reverse();
     var offset = {
       x: options.padding.x,
-      y: options.padding.y + 1/options.lineHeight // put first line of text right below anchor point
+      y: options.padding.y + 1/options.lineHeight - 0.1 // put first line of text right below anchor point
     };
+
+    var terms = d.what.split(/,\s*/).reverse();
     terms.forEach(function(term, i) {
       // text wrap: https://bl.ocks.org/mbostock/7555321
       var text = el.append('text')

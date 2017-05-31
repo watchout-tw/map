@@ -74,15 +74,29 @@ svg circle.center {
   fill: none;
   stroke: none; }
 svg g.quote rect {
-  fill: yellow;
+  fill: #FF5368;
   stroke: none;
-  opacity: 0.25; }
+  opacity: 0.25;
+  transition: opacity 0.25s; }
 svg g.quote text {
-  fill: black; }
+  fill: black;
+  opacity: 0.75;
+  transition: opacity 0.25s; }
+  svg g.quote text.media {
+    font-size: 0.65rem;
+    font-weight: bold; }
   svg g.quote text.and {
     opacity: 0.5;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     font-weight: bold; }
+svg g.quote:hover rect {
+  opacity: 0.85; }
+svg g.quote:hover text {
+  opacity: 1; }
+  svg g.quote:hover text.and {
+    opacity: 0.5; }
+svg g.quote.yes rect {
+  fill: #50E3C2; }
 
 svg.debug circle.center {
   fill: #FF5368;
