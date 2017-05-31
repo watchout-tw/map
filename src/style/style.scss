@@ -90,9 +90,34 @@ h2.list-item {
   }
 }
 
-g.quote {
-  > text {
-    line-height: 1.2em;
-    text-anchor: middle;
+svg {
+  circle.center {
+    fill: none;
+    stroke: none;
+  }
+  g.quote {
+    > rect {
+      fill: yellow;
+      stroke: none;
+      opacity: 0.25;
+    }
+    > text {
+      fill: black;
+    }
+  }
+}
+svg.debug {
+  circle.center {
+    fill: $color-musou;
+    stroke: none;
+  }
+  g.quote {
+    > rect {
+      fill: none;
+      stroke: $color-musou;
+    }
+    > text {
+      opacity: 0.25;
+    }
   }
 }
