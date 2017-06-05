@@ -1,11 +1,15 @@
 Vue.component('world', {
   mixins: [mixinWorld],
 });
+Vue.component('region', {
+  mixins: [mixinRegion],
+});
 
 var app = new Vue({
   el: '#app',
   data: {
     common: CommonData,
+    raw: [],
     header: {
       title: '釋字748號',
       description: '',
@@ -26,7 +30,16 @@ var app = new Vue({
     },
     debug: false,
   },
+  created: function() {
+    Vue.http.get('./src/data.json').then(this.getSuccess, this.getError);
+  },
   methods: {
+    getSuccess: function(response) {
+      this.raw = response.body;
+    },
+    getError: function(response) {
+      console.error(response);
+    },
     markdown: marked,
-  }
+  },
 });

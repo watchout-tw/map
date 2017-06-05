@@ -9,54 +9,47 @@ var mixinWorld = {
       rows: [],
     }
   },
-  props: ['debug'],
+  props: ['raw', 'debug'],
   computed: {
   },
   watch: {
-    debug: function(now) {
-      this.el.root.classed('debug', now);
-    }
-  },
-  created: function() {
-    Vue.http.get('./src/data.json').then(this.getSuccess, this.getError);
-  },
-  methods: {
-    getSuccess: function(response) {
-      this.rows = response.body;
-      this.init();
-      this.draw();
-      this.group();
-      this.spread();
-    },
-    getError: function(response) {
-      console.error(response);
-    },
-    init: function() {
-      this.size.w = 960;
-      this.size.h = 640;
-      this.size.r = 4;
-      this.size.lineHeight = 1.25;
-
-      this.el.container = d3.select(this.$el).select('.draw');
-      this.util.axes.x.scale = d3.scaleLinear()
-        .domain([-180, 180])
-        .range([0, this.size.w]);
-      this.util.axes.y.scale = d3.scaleLinear()
-        .domain([-90, 90])
-        .range([this.size.h, 0]);
-
+    raw: function(now) {
       var self = this;
-      this.rows = this.rows.map(function(row) {
+      this.rows = now.map(function(row) {
         return Object.assign(row, {
           x: self.util.axes.x.scale(row.lng),
           y: self.util.axes.y.scale(row.lat)
         })
       });
-
-      this.el.root = this.el.container.append('svg')
-        .classed('debug', this.debug)
-        .attr('viewBox', [0, 0, this.size.w, this.size.h].join(' '));
+      if(this.rows.length > 0) {
+        this.draw();
+        this.group();
+        this.spread();
+      }
     },
+    debug: function(now) {
+      this.el.root.classed('debug', now);
+    }
+  },
+  mounted: function() {
+    this.size.w = 960;
+    this.size.h = 640;
+    this.size.r = 4;
+    this.size.lineHeight = 1.25;
+
+    this.util.axes.x.scale = d3.scaleLinear()
+      .domain([-180, 180])
+      .range([0, this.size.w]);
+    this.util.axes.y.scale = d3.scaleLinear()
+      .domain([-90, 90])
+      .range([this.size.h, 0]);
+
+    this.el.container = d3.select(this.$el).select('.draw');
+    this.el.root = this.el.container.append('svg')
+      .classed('debug', this.debug)
+      .attr('viewBox', [0, 0, this.size.w, this.size.h].join(' '));
+  },
+  methods: {
     draw: function() {
       // draw quotes
       var quotes = this.el.root.selectAll('g.quote').data(this.rows);
