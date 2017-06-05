@@ -1,5 +1,5 @@
-Vue.component('atlas', {
-  mixins: [mixinAtlas],
+Vue.component('world', {
+  mixins: [mixinWorld],
 });
 
 var app = new Vue({

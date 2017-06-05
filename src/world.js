@@ -1,4 +1,4 @@
-var mixinAtlas = {
+var mixinWorld = {
   data: function() {
     return {
       el: {},
