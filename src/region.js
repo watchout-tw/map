@@ -42,7 +42,10 @@ var mixinRegion = {
           lineHeight: this.size.lineHeight,
         })
         .tightlyPack({
-          maxX: this.size.w - 16,
+          max: {
+            x: this.size.w - 16,
+            y: this.size
+          },
           margin: {
             x: 4,
             y: 4,
@@ -77,7 +80,7 @@ d3.selection.prototype.tightlyPack = function(options) {
   nodes.forEach(function(node) {
     var box = node.getBBox();
     var el = d3.select(node);
-    if(next.x + box.width > options.maxX) {
+    if(next.x + box.width > options.max.x) {
       next.x = 0;
       next.y += maxY + options.margin.y;
     }
