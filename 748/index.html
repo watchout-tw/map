@@ -32,7 +32,10 @@
         <div class="item d-flex flex-row" v-for="item in authorship"><div class="job">{{ item.job }}</div><div v-for="person in item.people" class="person">{{ person }}</div></div>
       </div>
     </header>
-    <section id="atlas">
+    <section id="graphs">
+      <div class="atlas atlas-regions d-flex flex-wrap">
+        <region v-for="region of regions" :raw="raw" :region="region" :debug="debug" :key="region.id"></region>
+      </div>
       <world :raw="raw" :debug="debug"></world>
     </section>
     <section id="conclusion" class="textgroup">

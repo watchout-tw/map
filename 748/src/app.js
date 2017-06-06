@@ -10,6 +10,32 @@ var app = new Vue({
   data: {
     common: CommonData,
     raw: [],
+    regions: [
+      {
+        id: 'europe',
+        name: '歐洲'
+      },
+      {
+        id: 'asia',
+        name: '亞洲'
+      },
+      {
+        id: 'nam',
+        name: '北美洲'
+      },
+      {
+        id: 'africa',
+        name: '非洲'
+      },
+      {
+        id: 'pacific',
+        name: '太平洋區域'
+      },
+      {
+        id: 'sam',
+        name: '中美洲及南美洲'
+      }
+    ],
     header: {
       title: '釋字748號',
       description: '',

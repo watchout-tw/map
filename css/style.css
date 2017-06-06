@@ -103,4 +103,7 @@ svg.debug g.quote rect {
 svg.debug g.quote text {
   opacity: 0.25; }
 
+.atlas-regions > .region {
+  width: 33.33333333%; }
+
 /*# sourceMappingURL=style.css.map */

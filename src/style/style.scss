@@ -150,3 +150,9 @@ svg.debug {
     }
   }
 }
+
+.atlas-regions {
+  > .region {
+    width: 33.33333333%;
+  }
+}
