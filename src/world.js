@@ -28,7 +28,7 @@ var mixinWorld = {
       }
     },
     debug: function(now) {
-      this.el.root.classed('debug', now);
+      this.el.container.classed('debug', now);
     }
   },
   mounted: function() {
@@ -44,9 +44,9 @@ var mixinWorld = {
       .domain([-90, 90])
       .range([this.size.h, 0]);
 
-    this.el.container = d3.select(this.$el).select('.draw');
+    this.el.container = d3.select(this.$el).select('.draw')
+      .classed('debug', this.debug);
     this.el.root = this.el.container.append('svg')
-      .classed('debug', this.debug)
       .attr('viewBox', [0, 0, this.size.w, this.size.h].join(' '));
   },
   methods: {
@@ -179,14 +179,12 @@ d3.selection.prototype.centerCenter = function() {
 d3.selection.prototype.makeLabel = function(options) {
   this.each(function(d) {
     var root = d3.select(this)
-      .classed('yes', /country/.test(d.what))
-    var anchor = root.append('a')
+      .classed('yes', /country/.test(d.what) || /country/.test(d.what_in_english))
+    var el = root.append('a') // where all the content actually go
       .attr('xlink:href', d.link)
       .attr('target', '_blank');
 
     var rem = parseInt(root.style('font-size'));
-
-    var el = anchor; // where all the content actually go
     var offset = {
       x: options.padding.x,
       y: options.padding.y + 1/options.lineHeight - 0.1 // put first line of text right below anchor point

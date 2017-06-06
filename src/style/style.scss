@@ -90,7 +90,7 @@ h2.list-item {
   }
 }
 
-svg {
+.draw {
   $transitionDuration: 0.25s;
   circle.center {
     fill: none;
@@ -135,7 +135,7 @@ svg {
     }
   }
 }
-svg.debug {
+.draw.debug {
   circle.center {
     fill: $color-musou;
     stroke: none;
@@ -154,5 +154,12 @@ svg.debug {
 .atlas-regions {
   > .region {
     width: 33.33333333%;
+    > .score {
+      font-size: 2rem;
+      line-height: 1;
+    }
+    > .draw {
+      margin: 0.5rem 0 1rem;
+    }
   }
 }

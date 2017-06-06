@@ -66,44 +66,49 @@ h2.list-item {
     .atlas > .draw > svg {
       width: 100%; }
 
-svg circle.center {
+.draw circle.center {
   fill: none;
   stroke: none; }
-svg g.quote rect {
+.draw g.quote rect {
   fill: #FF5368;
   stroke: none;
   opacity: 0.25;
   transition: opacity 0.25s; }
-svg g.quote text {
+.draw g.quote text {
   fill: black;
   opacity: 0.75;
   transition: opacity 0.25s; }
-  svg g.quote text.media {
+  .draw g.quote text.media {
     font-size: 0.65rem;
     font-weight: bold; }
-  svg g.quote text.and {
+  .draw g.quote text.and {
     opacity: 0.5;
     font-size: 0.75rem;
     font-weight: bold; }
-svg g.quote:hover rect {
+.draw g.quote:hover rect {
   opacity: 0.85; }
-svg g.quote:hover text {
+.draw g.quote:hover text {
   opacity: 1; }
-  svg g.quote:hover text.and {
+  .draw g.quote:hover text.and {
     opacity: 0.5; }
-svg g.quote.yes rect {
+.draw g.quote.yes rect {
   fill: #50E3C2; }
 
-svg.debug circle.center {
+.draw.debug circle.center {
   fill: #FF5368;
   stroke: none; }
-svg.debug g.quote rect {
+.draw.debug g.quote rect {
   fill: none;
   stroke: #FF5368; }
-svg.debug g.quote text {
+.draw.debug g.quote text {
   opacity: 0.25; }
 
 .atlas-regions > .region {
   width: 33.33333333%; }
+  .atlas-regions > .region > .score {
+    font-size: 2rem;
+    line-height: 1; }
+  .atlas-regions > .region > .draw {
+    margin: 0.5rem 0 1rem; }
 
 /*# sourceMappingURL=style.css.map */
