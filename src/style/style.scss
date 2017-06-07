@@ -63,10 +63,14 @@ h2.list-item {
     }
   }
 }
+
 blockquote {
   @include font-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: normal;
+  @include bp-md-up {
+    font-size: 3rem;
+  }
 }
 button {
   padding: 0.5rem 1rem;
@@ -79,15 +83,17 @@ button {
 }
 
 .question {
-  margin: 0 auto;
-  max-width: 60rem;
+  width: auto;
+  margin: 0 1rem;
+  > .content {
+    margin: 0 auto;
+    max-width: 60rem;
+  }
 }
 .interaction {
   &.multiple-choice {
     > ul > li {
-      &:not(:last-of-type) {
-        margin-right: 0.25rem;
-      }
+      margin: 0.125rem;
       padding: 0.25rem 1rem 0;
       background: rgba($color-musou, 0.25);
       opacity: 0.5;
@@ -104,8 +110,9 @@ button {
 .interaction-done > .answer {
   visibility: visible;
 }
-.graph {
-  margin: 4rem 0;
+.answer {
+  width: auto;
+  margin: 4rem 1rem;
 }
 .conclusion {
   > .title {
