@@ -68,6 +68,7 @@ blockquote {
   @include font-serif;
   font-size: 2rem;
   font-weight: normal;
+  margin: 0;
   @include bp-md-up {
     font-size: 3rem;
   }

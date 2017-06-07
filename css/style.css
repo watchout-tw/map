@@ -48,7 +48,8 @@ h2.list-item {
 blockquote {
   font-family: "century-std", "noto-serif-patch", "source-han-serif-tc", serif;
   font-size: 2rem;
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0; }
   @media (min-width: 768px) {
     blockquote {
       font-size: 3rem; } }
