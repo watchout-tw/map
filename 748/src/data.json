@@ -87,7 +87,7 @@
         "date": "2017-05-24",
         "time": "",
         "media": "LA Times",
-        "what": "independently administered [island]",
+        "what": "[independently administered] island",
         "what_in_english": "",
         "media_hq_city": "LA, CA",
         "media_hq_country": "US",
@@ -255,7 +255,7 @@
         "date": "2017-05-24",
         "time": "",
         "media": "The Straits Times",
-        "what": "country, place",
+        "what": "country",
         "what_in_english": "",
         "media_hq_city": "",
         "media_hq_country": "Singapore",
@@ -325,7 +325,7 @@
         "date": "2017-05-24",
         "time": "",
         "media": "qz",
-        "what": "place, self-governing island, nation",
+        "what": "place, self-governing island",
         "what_in_english": "",
         "media_hq_city": "New York City",
         "media_hq_country": "US",
@@ -430,8 +430,8 @@
         "region": "europe",
         "link": "https://www.rte.ie/news/2017/0524/877480-taiwan/",
         "contributor": "kuochun",
-        "lat": 53.4064361,
-        "lng": -6.28709725390942
+        "lat": 53.3497645,
+        "lng": -6.2602732
     },
     {
         "date": "2017-05-24",
@@ -479,7 +479,7 @@
         "date": "2017-05-24",
         "time": "",
         "media": "Nikkei",
-        "what": "island, self-governing",
+        "what": "[self-governing] island",
         "what_in_english": "",
         "media_hq_city": "Tokyo",
         "media_hq_country": "Japan",
@@ -556,8 +556,8 @@
         "region": "europe",
         "link": "http://www.irishtimes.com/news/world/asia-pacific/taiwan-set-to-be-first-asian-state-to-allow-same-sex-marriage-1.3095071",
         "contributor": "kuochun",
-        "lat": 53.4064361,
-        "lng": -6.28709725390942
+        "lat": 53.3497645,
+        "lng": -6.2602732
     },
     {
         "date": "2017-05-25",
@@ -962,8 +962,8 @@
         "region": "nam",
         "link": "http://www.ozy.com/presidential-daily-brief/pdb-78690/its-a-yes-78712",
         "contributor": "chihao",
-        "lat": 37.3855745,
-        "lng": -122.08205
+        "lat": 37.3893889,
+        "lng": -122.0832101
     },
     {
         "date": "2017-05-24",
@@ -1202,5 +1202,19 @@
         "contributor": "chihao",
         "lat": 40.4167047,
         "lng": -3.7035825
+    },
+    {
+        "date": "2017-05-24",
+        "time": "",
+        "media": "New York Times",
+        "what": "place",
+        "what_in_english": "place",
+        "media_hq_city": "New York City",
+        "media_hq_country": "US",
+        "region": "nam",
+        "link": "https://www.nytimes.com/2017/05/24/world/asia/taiwan-same-sex-marriage-court.html?_r=0",
+        "contributor": "kuochun",
+        "lat": 40.7305991,
+        "lng": -73.9865812
     }
 ]
