@@ -9,6 +9,9 @@ var mixinRegion = {
   },
   props: ['raw', 'region', 'debug'],
   watch: {
+    size: function(now) {
+      console.log(this.size, now);
+    },
     raw: function(now) {
       var self = this;
       this.rows = this.raw.filter(function(row) {

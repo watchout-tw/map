@@ -23,7 +23,7 @@ var app = new Vue({
         },
         {
           name: 'state',
-          translation: '國家'
+          translation: '國家機器'
         },
         {
           name: 'nation',
@@ -34,7 +34,8 @@ var app = new Vue({
           translation: '地方'
         }
       ],
-      selection: -1
+      selection: -1,
+      done: false
     },
     counts: [
       {
@@ -113,8 +114,11 @@ var app = new Vue({
     debug: false,
   },
   computed: {
+    classes: function() {
+      return [this.interaction.done ? 'interaction-done' : 'interaction-ongoing'];
+    },
     interactionSelectedOptionTranslation: function() {
-      return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].translation : '？';
+      return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].translation : '＿＿';
     }
   },
   created: function() {
@@ -128,10 +132,15 @@ var app = new Vue({
       console.error(response);
     },
     interactionSelectOption: function(event, selectionIndex) {
-      $(event.target).addClass(this.interaction.class).siblings().removeClass(this.interaction.class);
-      this.interaction.selection = selectionIndex;
+      if(!this.interaction.done) {
+        $(event.target).addClass(this.interaction.class).siblings().removeClass(this.interaction.class);
+        this.interaction.selection = selectionIndex;
+      }
     },
     interactionSubmit: function(event) {
+      console.log('submit')
+      if(!this.interaction.done && this.interaction.selection > -1)
+        this.interaction.done = true;
     },
     markdown: marked,
   },

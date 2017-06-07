@@ -31,7 +31,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF76PLV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  <div id="app">
+  <div id="app" :class="classes">
     <nav-bar-simple :channel="common.channels.musou"></nav-bar-simple>
     <header class="textgroup">
       <hgroup>
@@ -53,7 +53,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span>in Asia to legalize marriage equality.</span>
       </blockquote>
       <p><span>翻譯：台灣是亞洲第一個婚姻平權合法化的</span><strong v-html="interactionSelectedOptionTranslation"></strong></p>
-      <button>確定</button>
+      <button @click="interactionSubmit">確定</button>
     </section>
     <section class="answer graph">
       <div class="atlas atlas-counts d-flex justify-content-around">
@@ -65,7 +65,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <region v-for="region of regions" :raw="raw" :region="region" :debug="debug" :key="region.id"></region>
       </div>
     </section>
-    <section class="answergraph">
+    <section class="answer graph">
       <world :raw="raw" :debug="debug"></world>
     </section>
     <section class="answer conclusion textgroup">
