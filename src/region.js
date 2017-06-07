@@ -15,7 +15,7 @@ var mixinRegion = {
         return row.region == self.region.id;
       });
       this.draw();
-    }
+    },
     debug: function(now) {
       this.el.container.classed('debug', now);
     }
