@@ -63,17 +63,45 @@ h2.list-item {
     }
   }
 }
-#bridge {
-  width: 100%;
-  margin: 2rem 0;
-  padding: 1rem 0;
-  background: rgba($color-musou, 0.25);
-  text-align: center;
+blockquote {
   @include font-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-weight: normal;
 }
-#conclusion {
+button {
+  padding: 0.5rem 1rem;
+  background: rgba($color-musou, 0.65);
+  cursor: pointer;
+  &:hover, &:focus, &:active {
+    background: rgba($color-musou, 0.85);
+    @include shadow;
+  }
+}
+
+.question {
+  margin: 0 auto;
+  max-width: 60rem;
+}
+.interaction {
+  &.multiple-choice {
+    > ul > li {
+      &:not(:last-of-type) {
+        margin-right: 0.25rem;
+      }
+      padding: 0.25rem 1rem 0;
+      background: rgba($color-musou, 0.25);
+      opacity: 0.5;
+      cursor: pointer;
+      &:hover, &.selected {
+        opacity: 1;
+      }
+    }
+  }
+}
+.graph {
+  margin: 4rem 0;
+}
+.conclusion {
   > .title {
     margin: 1rem 0;
   }
@@ -89,7 +117,6 @@ h2.list-item {
     }
   }
 }
-
 .draw {
   $transitionDuration: 0.25s;
   circle.center {
@@ -150,13 +177,25 @@ h2.list-item {
     }
   }
 }
-
+.atlas-counts {
+  > .count {
+    > .score {
+      font-size: 4rem;
+      line-height: 1;
+    }
+  }
+}
 .atlas-regions {
   > .region {
     width: 33.33333333%;
     > .score {
-      font-size: 2rem;
-      line-height: 1;
+      line-height: 2rem;
+      > .value {
+        font-size: 2rem;
+      }
+      > .unit {
+        margin-left: 0.125rem;
+      }
     }
     > .draw {
       margin: 0.5rem 0 1rem;

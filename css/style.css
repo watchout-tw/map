@@ -45,17 +45,37 @@ h2.list-item {
   .authorship > .item > .person:not(:last-of-type) {
     margin-right: 1rem; }
 
-#bridge {
-  width: 100%;
-  margin: 2rem 0;
-  padding: 1rem 0;
-  background: rgba(255, 83, 104, 0.25);
-  text-align: center;
+blockquote {
   font-family: "century-std", "noto-serif-patch", "source-han-serif-tc", serif;
-  font-weight: bold;
-  font-size: 1.5rem; }
+  font-size: 3rem;
+  font-weight: normal; }
 
-#conclusion > .title {
+button {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 83, 104, 0.65);
+  cursor: pointer; }
+  button:hover, button:focus, button:active {
+    background: rgba(255, 83, 104, 0.85);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25); }
+
+.question {
+  margin: 0 auto;
+  max-width: 60rem; }
+
+.interaction.multiple-choice > ul > li {
+  padding: 0.25rem 1rem 0;
+  background: rgba(255, 83, 104, 0.25);
+  opacity: 0.5;
+  cursor: pointer; }
+  .interaction.multiple-choice > ul > li:not(:last-of-type) {
+    margin-right: 0.25rem; }
+  .interaction.multiple-choice > ul > li:hover, .interaction.multiple-choice > ul > li.selected {
+    opacity: 1; }
+
+.graph {
+  margin: 4rem 0; }
+
+.conclusion > .title {
   margin: 1rem 0; }
 
 .atlas {
@@ -103,11 +123,18 @@ h2.list-item {
 .draw.debug g.quote text {
   opacity: 0.25; }
 
+.atlas-counts > .count > .score {
+  font-size: 4rem;
+  line-height: 1; }
+
 .atlas-regions > .region {
   width: 33.33333333%; }
   .atlas-regions > .region > .score {
-    font-size: 2rem;
-    line-height: 1; }
+    line-height: 2rem; }
+    .atlas-regions > .region > .score > .value {
+      font-size: 2rem; }
+    .atlas-regions > .region > .score > .unit {
+      margin-left: 0.125rem; }
   .atlas-regions > .region > .draw {
     margin: 0.5rem 0 1rem; }
 

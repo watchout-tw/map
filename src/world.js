@@ -10,8 +10,6 @@ var mixinWorld = {
     }
   },
   props: ['raw', 'debug'],
-  computed: {
-  },
   watch: {
     raw: function(now) {
       var self = this;
@@ -179,7 +177,7 @@ d3.selection.prototype.centerCenter = function() {
 d3.selection.prototype.makeLabel = function(options) {
   this.each(function(d) {
     var root = d3.select(this)
-      .classed('yes', /country/.test(d.what) || /country/.test(d.what_in_english))
+      .classed('yes', /country|state|nation/.test(d.what + d.what_in_english))
     var el = root.append('a') // where all the content actually go
       .attr('xlink:href', d.link)
       .attr('target', '_blank');

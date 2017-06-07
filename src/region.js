@@ -64,7 +64,7 @@ var mixinRegion = {
   template: `
   <div class="region">
     <div class="name">{{ region.name }}</div>
-    <div class="score">{{ score }}</div>
+    <div class="score"><span class="value">{{ score }}</span><span class="unit">%</span></div>
     <div class="draw"></div>
   </div>
   `

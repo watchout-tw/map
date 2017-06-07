@@ -1,8 +1,11 @@
-Vue.component('world', {
-  mixins: [mixinWorld],
+Vue.component('count', {
+  mixins: [mixinCount],
 });
 Vue.component('region', {
   mixins: [mixinRegion],
+});
+Vue.component('world', {
+  mixins: [mixinWorld],
 });
 
 var app = new Vue({
@@ -10,6 +13,59 @@ var app = new Vue({
   data: {
     common: CommonData,
     raw: [],
+    interaction: {
+      type: 'multiple-choice',
+      class: 'selected',
+      options: [
+        {
+          name: 'country',
+          translation: '國家'
+        },
+        {
+          name: 'state',
+          translation: '國家'
+        },
+        {
+          name: 'nation',
+          translation: '民族'
+        },
+        {
+          name: 'place',
+          translation: '地方'
+        }
+      ],
+      selection: -1
+    },
+    counts: [
+      {
+        id: 'country',
+        name: 'country',
+        condition: function(str) {
+          return /country/.test(str);
+        }
+      },
+      {
+        id: 'state',
+        name: 'state',
+        condition: function(str) {
+          return /state/.test(str);
+        }
+      },
+      {
+        id: 'nation',
+        name: 'nation',
+        condition: function(str) {
+          return /nation/.test(str);
+        }
+      },
+      {
+        id: 'place',
+        name: 'place及其他',
+        condition: function(str) {
+          return /place|island|territor(y|ies)|democrac(y|ies)|government/.test(str);
+        }
+      },
+    ],
     regions: [
       {
         id: 'europe',
@@ -56,6 +112,11 @@ var app = new Vue({
     },
     debug: false,
   },
+  computed: {
+    interactionSelectedOptionTranslation: function() {
+      return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].translation : '？';
+    }
+  },
   created: function() {
     Vue.http.get('./src/data.json').then(this.getSuccess, this.getError);
   },
@@ -65,6 +126,12 @@ var app = new Vue({
     },
     getError: function(response) {
       console.error(response);
+    },
+    interactionSelectOption: function(event, selectionIndex) {
+      $(event.target).addClass(this.interaction.class).siblings().removeClass(this.interaction.class);
+      this.interaction.selection = selectionIndex;
+    },
+    interactionSubmit: function(event) {
     },
     markdown: marked,
   },

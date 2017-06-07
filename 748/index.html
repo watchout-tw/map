@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TF76PLV');</script>
+<!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://use.typekit.net/mub1lty.js"></script>
@@ -20,6 +27,10 @@
 	<link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF76PLV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <div id="app">
     <nav-bar-simple :channel="common.channels.musou"></nav-bar-simple>
     <header class="textgroup">
@@ -32,28 +43,38 @@
         <div class="item d-flex flex-row" v-for="item in authorship"><div class="job">{{ item.job }}</div><div v-for="person in item.people" class="person">{{ person }}</div></div>
       </div>
     </header>
-    <section id="graphs">
+    <section class="question">
+      <blockquote><span>Taiwan is the first</span>
+        <div class="interaction" :class="interaction.type">
+          <ul class="list-unstyled d-flex flex-wrap">
+            <li v-for="(option, index) in interaction.options" :id="'interaction-option-' + option.name" :key="option.name" @click="interactionSelectOption($event, index)">{{ option.name }}</li>
+          </ul>
+        </div>
+        <span>in Asia to legalize marriage equality.</span>
+      </blockquote>
+      <p><span>翻譯：台灣是亞洲第一個婚姻平權合法化的</span><strong v-html="interactionSelectedOptionTranslation"></strong></p>
+      <button>確定</button>
+    </section>
+    <section class="answer graph">
+      <div class="atlas atlas-counts d-flex justify-content-around">
+        <count v-for="count of counts" :raw="raw" :count="count" :debug="debug" :key="count.id"></count>
+      </div>
+    </section>
+    <section class="answer graph">
       <div class="atlas atlas-regions d-flex flex-wrap">
         <region v-for="region of regions" :raw="raw" :region="region" :debug="debug" :key="region.id"></region>
       </div>
+    </section>
+    <section class="answergraph">
       <world :raw="raw" :debug="debug"></world>
     </section>
-    <section id="conclusion" class="textgroup">
+    <section class="answer conclusion textgroup">
       <h2 class="title">{{ conclusion.title }}</h2>
       <div class="description a-text-only" v-html="markdown(conclusion.description)"></div>
     </section>
   </div><!-- end of app -->
   <footer></footer>
   <div id="pitcher"></div>
-	<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-48524226-3', 'watchout.tw');
-ga('require', 'displayfeatures');
-ga('send', 'pageview');
-	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.js"></script>
 	<script src="https://cdn.jsdelivr.net/vue.resource/1.2.1/vue-resource.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -64,8 +85,9 @@ ga('send', 'pageview');
   <!-- page-specific scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.8.0/d3.min.js" charset="utf-8"></script>
-  <script src="../src/world.js"></script>
+  <script src="../src/count.js"></script>
   <script src="../src/region.js"></script>
+  <script src="../src/world.js"></script>
   <script src="./src/app.js"></script>
 </body>
 </html>
