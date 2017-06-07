@@ -2,16 +2,22 @@ var mixinRegion = {
   data: function() {
     return {
       el: {},
-      size: {},
+      size: {
+        w: 320,
+        h: 320,
+        lineHeight: 1.25,
+      },
       rows: [],
       score: 0,
     }
   },
   props: ['raw', 'region', 'debug'],
+  computed: {
+    viewBox: function() {
+      return [0, 0, this.size.w, this.size.h].join(' ');
+    }
+  },
   watch: {
-    size: function(now) {
-      console.log(this.size, now);
-    },
     raw: function(now) {
       var self = this;
       this.rows = this.raw.filter(function(row) {
@@ -19,19 +25,10 @@ var mixinRegion = {
       });
       this.draw();
     },
-    debug: function(now) {
-      this.el.container.classed('debug', now);
-    }
   },
   mounted: function() {
-    this.size.w = 320;
-    this.size.h = 320;
-    this.size.lineHeight = 1.25;
-
-    this.el.container = d3.select(this.$el).select('.draw');
-    this.el.root = this.el.container.append('svg')
-      .classed('debug', this.debug)
-      .attr('viewBox', [0, 0, this.size.w, this.size.h].join(' '));
+    this.el.container = d3.select(this.$el).select('.draw')
+    this.el.root = this.el.container.select('svg')
   },
   methods: {
     draw: function() {
@@ -62,13 +59,24 @@ var mixinRegion = {
         Math.round(this.el.root.selectAll('g.quote.yes').size() / this.rows.length * 100) :
         0
       );
+
+      var height = 0;
+      this.el.root.selectAll('g.quote').each(function(d) {
+        var box = this.getBBox();
+        var translate = /translate\(([\d.]+)\,([\d.]+)\)/.exec(this.getAttribute('transform'))
+        var y = parseFloat(translate[2])
+        height = Math.max(height, Math.ceil(y + box.height));
+      })
+      this.size.h = height;
     },
   },
   template: `
   <div class="region">
     <div class="name">{{ region.name }}</div>
     <div class="score"><span class="value">{{ score }}</span><span class="unit">%</span></div>
-    <div class="draw"></div>
+    <div class="draw" :class="{ debug: debug }">
+      <svg :viewBox="viewBox"></svg>
+    </div>
   </div>
   `
 };
