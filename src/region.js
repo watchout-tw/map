@@ -16,6 +16,9 @@ var mixinRegion = {
       });
       this.draw();
     }
+    debug: function(now) {
+      this.el.container.classed('debug', now);
+    }
   },
   mounted: function() {
     this.size.w = 320;
