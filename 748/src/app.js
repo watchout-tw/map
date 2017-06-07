@@ -138,7 +138,6 @@ var app = new Vue({
       }
     },
     interactionSubmit: function(event) {
-      console.log('submit')
       if(!this.interaction.done && this.interaction.selection > -1)
         this.interaction.done = true;
     },
