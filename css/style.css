@@ -55,6 +55,7 @@ blockquote {
       font-size: 3rem; } }
 
 button {
+  font-size: 1.5rem;
   padding: 0.5rem 1rem;
   background: rgba(255, 83, 104, 0.65);
   cursor: pointer; }
@@ -68,15 +69,29 @@ button {
   .question > .content {
     margin: 0 auto;
     max-width: 60rem; }
+    .question > .content .blank {
+      border-bottom: 2px black solid; }
+      @media (min-width: 768px) {
+        .question > .content .blank {
+          border-bottom-width: 4px; } }
 
-.interaction.multiple-choice > ul > li {
-  margin: 0.125rem;
-  padding: 0.25rem 1rem 0;
-  background: rgba(255, 83, 104, 0.25);
-  opacity: 0.5;
-  cursor: pointer; }
-  .interaction.multiple-choice > ul > li:hover, .interaction.multiple-choice > ul > li.selected {
-    opacity: 1; }
+.interaction {
+  margin: 1rem 0;
+  font-size: 1.75rem; }
+  .interaction.multiple-choice > ul > li {
+    margin: 0.25rem 1rem 0.25rem 0;
+    padding: 0;
+    cursor: pointer; }
+    .interaction.multiple-choice > ul > li > .index, .interaction.multiple-choice > ul > li > .value {
+      display: block; }
+    .interaction.multiple-choice > ul > li > .index {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.25;
+      margin-right: 0.25rem; }
+    .interaction.multiple-choice > ul > li > .value {
+      line-height: 1; }
+    .interaction.multiple-choice > ul > li:hover, .interaction.multiple-choice > ul > li.selected {
+      color: #FF5368; }
 
 .interaction-ongoing > .answer {
   visibility: hidden; }

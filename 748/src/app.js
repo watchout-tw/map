@@ -11,6 +11,7 @@ Vue.component('world', {
 var app = new Vue({
   el: '#app',
   data: {
+    circledDigits: ['⓪','①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩'],
     common: CommonData,
     raw: [],
     interaction: {
@@ -117,8 +118,11 @@ var app = new Vue({
     classes: function() {
       return [this.interaction.done ? 'interaction-done' : 'interaction-ongoing'];
     },
+    interactionSelectedOption: function() {
+      return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].name : '　　';
+    },
     interactionSelectedOptionTranslation: function() {
-      return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].translation : '＿＿';
+      return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].translation : '　　';
     }
   },
   created: function() {
@@ -133,7 +137,6 @@ var app = new Vue({
     },
     interactionSelectOption: function(event, selectionIndex) {
       if(!this.interaction.done) {
-        $(event.target).addClass(this.interaction.class).siblings().removeClass(this.interaction.class);
         this.interaction.selection = selectionIndex;
       }
     },

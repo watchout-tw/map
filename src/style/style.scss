@@ -74,6 +74,7 @@ blockquote {
   }
 }
 button {
+  font-size: 1.5rem;
   padding: 0.5rem 1rem;
   background: rgba($color-musou, 0.65);
   cursor: pointer;
@@ -89,18 +90,38 @@ button {
   > .content {
     margin: 0 auto;
     max-width: 60rem;
+
+    .blank {
+      border-bottom: 2px black solid;
+      @include bp-md-up {
+        border-bottom-width: 4px;
+      }
+    }
   }
 }
 .interaction {
+  margin: 1rem 0;
+  font-size: 1.75rem;
+
   &.multiple-choice {
     > ul > li {
-      margin: 0.125rem;
-      padding: 0.25rem 1rem 0;
-      background: rgba($color-musou, 0.25);
-      opacity: 0.5;
+      margin: 0.25rem 1rem 0.25rem 0;
+      padding: 0;
       cursor: pointer;
+
+      > .index, > .value {
+        display: block;
+      }
+      > .index {
+        font-family: $font-sans-serif;
+        line-height: 1.25;
+        margin-right: 0.25rem;
+      }
+      > .value {
+        line-height: 1;
+      }
       &:hover, &.selected {
-        opacity: 1;
+        color: $color-musou;
       }
     }
   }
