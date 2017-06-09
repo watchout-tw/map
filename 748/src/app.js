@@ -24,7 +24,7 @@ var app = new Vue({
         },
         {
           name: 'state',
-          translation: '國家機器'
+          translation: '政權'
         },
         {
           name: 'nation',
