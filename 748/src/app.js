@@ -122,7 +122,7 @@ var app = new Vue({
       return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].name : '　　';
     },
     interactionSelectedOptionTranslation: function() {
-      return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].translation : '　　';
+      return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].translation : '　　　　';
     }
   },
   created: function() {
