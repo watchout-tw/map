@@ -6,7 +6,7 @@ var app = new Vue({
   data: {
     common: CommonData,
     title: '啊不是很有國際觀',
-    description: '世界如何看台灣？',
+    description: '世界各地的人，說著不同的語言，看著不同的報導，過著不同的生活。我們對他們了解多少？他們又是如何認識、看待台灣的？',
     pages: [
       {
         id: '748',
