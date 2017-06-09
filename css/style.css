@@ -159,12 +159,22 @@ button {
 .draw.debug g.quote text {
   opacity: 0.25; }
 
-.atlas-counts > .count > .score {
-  font-size: 4rem;
-  line-height: 1; }
+.atlas-counts > .count {
+  margin: 0.5rem 0;
+  width: 50%; }
+  @media (min-width: 576px) {
+    .atlas-counts > .count {
+      width: auto; } }
+  .atlas-counts > .count > .score {
+    font-size: 4rem;
+    line-height: 1; }
 
 .atlas-regions > .region {
-  width: 33.33333333%; }
+  width: 100%;
+  max-width: 20rem; }
+  @media (min-width: 576px) {
+    .atlas-regions > .region {
+      width: 33.3333%; } }
   .atlas-regions > .region > .score {
     line-height: 2rem; }
     .atlas-regions > .region > .score > .value {

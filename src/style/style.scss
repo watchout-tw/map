@@ -223,6 +223,11 @@ button {
 }
 .atlas-counts {
   > .count {
+    margin: 0.5rem 0;
+    width: 50%;
+    @include bp-sm-up {
+      width: auto;
+    }
     > .score {
       font-size: 4rem;
       line-height: 1;
@@ -231,7 +236,11 @@ button {
 }
 .atlas-regions {
   > .region {
-    width: 33.33333333%;
+    width: 100%;
+    max-width: 20rem;
+    @include bp-sm-up {
+      width: 33.3333%;
+    }
     > .score {
       line-height: 2rem;
       > .value {
