@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TF76PLV');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://use.typekit.net/mub1lty.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i" />
+	<link rel="stylesheet" href="https://watchout.tw/fonts/century-std/styles.css" />
+	<link rel="stylesheet" href="https://watchout.tw/fonts/circular-pro/styles.css" />
+	<link rel="stylesheet" href="https://watchout.tw/fonts/noto-serif-patch/styles.css" />
+  <link rel="stylesheet" href="https://watchout.tw/css/common.css"/>
+	<!-- common tags -->
+	<!-- page-specific tags -->
+  <title>沃草→國會無雙←啊不是很有國際觀↑</title>
+  <meta name="description" content="沃草→國會無雙←啊不是很有國際觀↑" />
+	<meta property="og:image" content="https://musou.watchout.tw/draw/asset/key_visual.png" />
+  <link rel="icon" href="https://watchout.tw/asset/logo/musou/small.png">
+	<link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF76PLV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div id="app">
+    <nav-bar-simple :channel="common.channels.musou"></nav-bar-simple>
+    <header class="textgroup">
+      <h1>{{ title }}</h1>
+      <div class="description" v-html="markdown(description)"></div>
+    </header>
+    <div class="pages d-flex flex-wrap">
+      <a v-for="page in pages" :key="page.id" :href="page.id" class="page"><h2 class="list-item">{{ page.title }}</h2></a>
+    </div>
+  </div><!-- end of app -->
+  <footer></footer>
+  <div id="pitcher"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/vue.resource/1.2.1/vue-resource.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://watchout.tw/build/common.js"></script>
+  <!-- common scripts -->
+  <!-- page-specific scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+  <script src="./src/app.js"></script>
+</body>
+</html>
