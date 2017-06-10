@@ -3,9 +3,7 @@ var mixinWorld = {
     return {
       el: {},
       size: {},
-      util: {
-        axes: { x: {}, y: {} }
-      },
+      util: {},
       rows: [],
     }
   },
@@ -14,10 +12,11 @@ var mixinWorld = {
     raw: function(now) {
       var self = this;
       this.rows = now.map(function(row) {
+        var pos = self.util.projection([row.lng, row.lat]);
         return Object.assign(row, {
-          x: self.util.axes.x.scale(row.lng),
-          y: self.util.axes.y.scale(row.lat)
-        })
+          x: pos[0],
+          y: pos[1]
+        });
       });
       if(this.rows.length > 0) {
         this.draw();
@@ -31,16 +30,14 @@ var mixinWorld = {
   },
   mounted: function() {
     this.size.w = 960;
-    this.size.h = 640;
+    this.size.h = 500;
     this.size.r = 4;
     this.size.lineHeight = 1.25;
 
-    this.util.axes.x.scale = d3.scaleLinear()
-      .domain([-180, 180])
-      .range([0, this.size.w]);
-    this.util.axes.y.scale = d3.scaleLinear()
-      .domain([-90, 90])
-      .range([this.size.h, 0]);
+    this.util.offset = {x: 0, y: 64};
+    this.util.projection = d3.geoMercator()
+      .scale(this.size.w/(2*Math.PI))
+      .translate([this.size.w/2, this.size.h/2 + this.util.offset.y])
 
     this.el.container = d3.select(this.$el).select('.draw')
       .classed('debug', this.debug);
@@ -106,12 +103,8 @@ var mixinWorld = {
       var simulation = d3.forceSimulation();
       simulation.force('collide', d3.forceCollide()
         .radius(function(d) {
-          return (d.width + d.height)*0.25
+          return (d.width + d.height)*0.125
         })
-      );
-      simulation.force('center', d3.forceCenter()
-        .x(this.size.w/2)
-        .y(this.size.h/2)
       );
       simulation.nodes(this.rows);
       simulation.on('tick', function() {
@@ -126,6 +119,7 @@ var mixinWorld = {
   template: `
   <div class="atlas atlas-world">
     <div class="draw"></div>
+    <figcaption><a class="a-text" href="https://s-media-cache-ak0.pinimg.com/originals/a4/dc/b3/a4dcb30b0ba3b5e26cc5b6788b98c625.jpg" target="_blank">Image Source</a></figcaption>
   </div>
   `,
 }
