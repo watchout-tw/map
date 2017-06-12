@@ -181,7 +181,7 @@ button {
     line-height: 1; }
 
 .atlas-regions > .region {
-  width: 100%;
+  width: 50%;
   max-width: 20rem; }
   @media (min-width: 576px) {
     .atlas-regions > .region {

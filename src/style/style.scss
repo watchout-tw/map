@@ -247,7 +247,7 @@ button {
 }
 .atlas-regions {
   > .region {
-    width: 100%;
+    width: 50%;
     max-width: 20rem;
     @include bp-sm-up {
       width: 33.3333%;
