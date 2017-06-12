@@ -10,7 +10,7 @@ var app = new Vue({
     pages: [
       {
         id: '748',
-        title: '釋字748號',
+        title: '滅國也同志，建國也同志',
       }
     ]
   }

@@ -23,12 +23,12 @@ body {
 header {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  > hgroup {
+  hgroup {
     > h2 {
       color: $color-musou;
     }
   }
-  > .description {
+  .description {
     margin: 1rem 0;
   }
 }
@@ -41,9 +41,7 @@ h2.list-item {
   margin: 0;
 }
 .textgroup {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  max-width: 30rem;
+  max-width: 32rem;
   width: auto;
 }
 figcaption {
@@ -65,6 +63,7 @@ figcaption {
 /* individual pages */
 
 .authorship {
+  margin: 1rem 0;
   color: $color-watchout;
   > .item {
     > .job {
@@ -97,11 +96,16 @@ button {
   }
 }
 
+header, section {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .question {
   width: auto;
   margin: 0 1rem;
   > .content {
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     max-width: 60rem;
     > blockquote, > p {
       margin: 0 0 1rem;
@@ -142,20 +146,19 @@ button {
     }
   }
 }
-.interaction-ongoing > .answer {
+.interaction-ongoing .show-after-interaction {
   visibility: hidden;
 }
-.interaction-done > .answer {
+.interaction-done .show-after-interaction {
   visibility: visible;
 }
 .answer {
   width: auto;
-  margin: 4rem 1rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
-.conclusion {
-  > .title {
-    margin: 1rem 0;
-  }
+.title {
+  margin: 1rem 0;
 }
 .full-width {
   margin-left: 0;
@@ -232,16 +235,24 @@ button {
     }
   }
 }
-.atlas-counts {
+.atlas-tally {
   > .count {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     width: 50%;
     @include bp-sm-up {
       width: auto;
     }
     > .score {
-      font-size: 4rem;
       line-height: 1;
+      > .value {
+        font-size: 4rem;
+      }
+      > .unit {
+        margin-left: 0.25rem;
+      }
+    }
+    > .fraction {
+      font-size: 0.85rem;
     }
   }
 }
@@ -267,6 +278,8 @@ button {
   }
 }
 .atlas-world {
+  margin-left: -1rem;
+  margin-right: -1rem;
   > .draw {
     background: url(../asset/world_map_mercator-mod.jpg);
     background-size: cover;

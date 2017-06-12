@@ -33,17 +33,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   <div id="app" :class="classes">
     <nav-bar-simple :channel="common.channels.musou"></nav-bar-simple>
-    <header class="textgroup">
-      <hgroup>
-        <h2>啊不是很有國際觀</h2>
-        <h1>{{ header.title }}</h1>
-      </hgroup>
-      <div class="description" v-html="markdown(header.description)"></div>
-      <div class="authorship">
-        <div class="item d-flex flex-row" v-for="item in authorship"><div class="job">{{ item.job }}</div><div v-for="person in item.people" class="person">{{ person }}</div></div>
+    <header>
+      <div class="textgroup">
+        <hgroup>
+          <h2>啊不是很有國際觀</h2>
+          <h1>{{ header.title }}</h1>
+        </hgroup>
+        <div class="authorship">
+          <div class="item d-flex flex-row" v-for="item in authorship"><div class="job">{{ item.job }}</div><div v-for="person in item.people" class="person">{{ person }}</div></div>
+        </div>
       </div>
     </header>
     <section class="question">
+      <div class="introduction textgroup" v-html="markdown(question.introduction)"></div>
       <div class="content">
         <blockquote>Taiwan will be the first <em class="blank" v-html="interactionSelectedOption"></em> in Asia to legalize marriage equality.</blockquote>
         <p><span>翻譯：台灣會是亞洲第一個婚姻平權合法化的</span><strong class="blank" v-html="interactionSelectedOptionTranslation"></strong></p>
@@ -53,23 +55,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </ul>
         </div>
         <button @click="interactionSubmit">交卷</button>
-      </content>
+      </div>
+      <div class="explanation textgroup show-after-interaction" v-html="markdown(question.conclusion)"></div>
     </section>
-    <section class="answer graph">
-      <div class="atlas atlas-counts d-flex flex-wrap justify-content-around">
+    <section class="answer graph show-after-interaction">
+      <div class="textgroup">
+        <div class="title"><h2>{{ sections.tally.title }}</h2></div>
+        <div class="description" v-html="markdown(sections.tally.description)"></div>
+      </div>
+      <div class="atlas atlas-tally d-flex flex-wrap justify-content-around">
         <count v-for="count of counts" :raw="raw" :count="count" :debug="debug" :key="count.id"></count>
       </div>
     </section>
-    <section class="answer graph">
+    <section class="answer graph show-after-interaction">
+      <div class="textgroup">
+        <div class="title"><h2>{{ sections.regions.title }}</h2></div>
+        <div class="description" v-html="markdown(sections.regions.description)"></div>
+      </div>
       <div class="atlas atlas-regions d-flex flex-wrap">
         <region v-for="region of regions" :raw="raw" :region="region" :debug="debug" :key="region.id"></region>
       </div>
     </section>
-    <section class="answer graph full-width">
+    <section class="answer graph show-after-interaction">
+      <div class="textgroup">
+        <div class="title"><h2>{{ sections.world.title }}</h2></div>
+        <div class="description" v-html="markdown(sections.world.description)"></div>
+      </div>
       <world :raw="raw" :debug="debug"></world>
     </section>
-    <section class="answer conclusion textgroup">
-      <h2 class="title">{{ conclusion.title }}</h2>
+    <section class="answer conclusion textgroup show-after-interaction">
+      <div class="title"><h2 class="title">{{ conclusion.title }}</h2></div>
       <div class="description a-text-only" v-html="markdown(conclusion.description)"></div>
     </section>
   </div><!-- end of app -->

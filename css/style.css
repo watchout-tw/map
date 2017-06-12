@@ -20,9 +20,9 @@ body {
 header {
   margin-top: 2rem;
   margin-bottom: 2rem; }
-  header > hgroup > h2 {
+  header hgroup > h2 {
     color: #FF5368; }
-  header > .description {
+  header .description {
     margin: 1rem 0; }
 
 h1, h2 {
@@ -33,9 +33,7 @@ h2.list-item {
   margin: 0; }
 
 .textgroup {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  max-width: 30rem;
+  max-width: 32rem;
   width: auto; }
 
 figcaption {
@@ -51,6 +49,7 @@ figcaption {
 
 /* individual pages */
 .authorship {
+  margin: 1rem 0;
   color: #50E3C2; }
   .authorship > .item > .job {
     width: 4rem;
@@ -76,11 +75,15 @@ button {
     background: rgba(255, 83, 104, 0.85);
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25); }
 
+header, section {
+  margin-left: 1rem;
+  margin-right: 1rem; }
+
 .question {
   width: auto;
   margin: 0 1rem; }
   .question > .content {
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     max-width: 60rem; }
     .question > .content > blockquote, .question > .content > p {
       margin: 0 0 1rem; }
@@ -108,17 +111,18 @@ button {
     .interaction.multiple-choice > ul > li:hover, .interaction.multiple-choice > ul > li.selected {
       color: #FF5368; }
 
-.interaction-ongoing > .answer {
+.interaction-ongoing .show-after-interaction {
   visibility: hidden; }
 
-.interaction-done > .answer {
+.interaction-done .show-after-interaction {
   visibility: visible; }
 
 .answer {
   width: auto;
-  margin: 4rem 1rem; }
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
 
-.conclusion > .title {
+.title {
   margin: 1rem 0; }
 
 .full-width {
@@ -170,15 +174,20 @@ button {
 .draw.debug g.quote text {
   opacity: 0.25; }
 
-.atlas-counts > .count {
-  margin: 0.5rem 0;
+.atlas-tally > .count {
+  margin: 1rem 0;
   width: 50%; }
   @media (min-width: 576px) {
-    .atlas-counts > .count {
+    .atlas-tally > .count {
       width: auto; } }
-  .atlas-counts > .count > .score {
-    font-size: 4rem;
+  .atlas-tally > .count > .score {
     line-height: 1; }
+    .atlas-tally > .count > .score > .value {
+      font-size: 4rem; }
+    .atlas-tally > .count > .score > .unit {
+      margin-left: 0.25rem; }
+  .atlas-tally > .count > .fraction {
+    font-size: 0.85rem; }
 
 .atlas-regions > .region {
   width: 50%;
@@ -195,10 +204,13 @@ button {
   .atlas-regions > .region > .draw {
     margin: 0.5rem 0 1rem; }
 
-.atlas-world > .draw {
-  background: url(../asset/world_map_mercator-mod.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; }
+.atlas-world {
+  margin-left: -1rem;
+  margin-right: -1rem; }
+  .atlas-world > .draw {
+    background: url(../asset/world_map_mercator-mod.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
 
 /*# sourceMappingURL=style.css.map */
