@@ -127,7 +127,7 @@ var app = new Vue({
     },
     conclusion: {
       title: '結論：#醒醒吧你沒有國家',
-      description: '從數字看來，全世界有四成的媒體不願意用**國家**來稱呼台灣，是因為中國的打壓，還是我們對自己的定位認識不夠呢？\n\n據說台灣現在的**國名**叫做**中華民國**，但是全世界僅有極少數媒體會用**Republic of China**來描述這塊你我共同生活的島嶼。同性婚姻要落實，還需要立法院修法，而台灣的國家定位，也仍然需要全體台灣人民共同回答「我們應該如何定位自己？」這個問題。\n\n在沃草，我們持續以各種方式，**努力降低理解複雜議題的門檻**。像《滅國也同志，建國也同志》這樣的資訊新聞需要許多人力整理資料、設計、製作，如果你喜歡沃草的內容，請別忘了[支持我們](https://watchout.tw/#support)！',
+      description: '從數字看來，全世界有四成的媒體不願意用**國家**來稱呼台灣，是因為中國的打壓，還是我們對自己的定位認識不夠呢？\n\n據說台灣現在的**國名**叫做**中華民國**，但是全世界僅有極少數媒體會用**Republic of China**來描述這塊你我共同生活的島嶼。同性婚姻要落實，還需要立法院修法，而台灣的國家定位，也仍然需要全體台灣人民共同回答「我們應該如何定位自己？」這個問題。\n\n在沃草，我們持續以各種方式，**努力降低理解複雜議題的門檻**。像《<span id="conclusion-title"></span>》這樣的資訊新聞需要許多人力整理資料、設計、製作，如果你喜歡沃草的內容，請別忘了[支持我們](https://watchout.tw/#support)！',
     },
     debug: false,
   },
@@ -149,10 +149,16 @@ var app = new Vue({
       $('#atlas-tally-country').html(rows.filter(function(row) {
         return self.$data.tally.country.condition(row.what + row.what_in_english);
       }).length)
+    },
+    header: function() {
+      this.updateTitle();
     }
   },
   created: function() {
     Vue.http.get('./src/data.json').then(this.getSuccess, this.getError);
+  },
+  mounted: function() {
+    this.updateTitle();
   },
   methods: {
     getSuccess: function(response) {
@@ -160,6 +166,9 @@ var app = new Vue({
     },
     getError: function(response) {
       console.error(response);
+    },
+    updateTitle: function() { // hack
+      $('#conclusion-title').html(this.header.title);
     },
     interactionSelectOption: function(event, selectionIndex) {
       if(!this.interaction.done) {
