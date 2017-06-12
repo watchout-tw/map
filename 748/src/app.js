@@ -150,7 +150,7 @@ var app = new Vue({
         return self.$data.tally.country.condition(row.what + row.what_in_english);
       }).length)
     },
-    header: function() {
+    'header.title': function() {
       this.updateTitle();
     }
   },
