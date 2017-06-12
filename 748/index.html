@@ -64,7 +64,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="description" v-html="markdown(sections.tally.description)"></div>
       </div>
       <div class="atlas atlas-tally d-flex flex-wrap justify-content-around">
-        <count v-for="count of counts" :raw="raw" :count="count" :debug="debug" :key="count.id"></count>
+        <count v-for="(count, id) of tally" :raw="raw" :count="count" :debug="debug" :key="id"></count>
       </div>
     </section>
     <section class="answer graph show-after-interaction">
@@ -73,7 +73,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="description" v-html="markdown(sections.regions.description)"></div>
       </div>
       <div class="atlas atlas-regions d-flex flex-wrap">
-        <region v-for="region of regions" :raw="raw" :region="region" :debug="debug" :key="region.id"></region>
+        <region v-for="(region, id) of regions" :raw="raw" :region="region" :debug="debug" :key="id"></region>
       </div>
     </section>
     <section class="answer graph show-after-interaction">
@@ -83,9 +83,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <world :raw="raw" :debug="debug"></world>
     </section>
-    <section class="answer conclusion textgroup show-after-interaction">
-      <div class="title"><h2 class="title">{{ conclusion.title }}</h2></div>
-      <div class="description a-text-only" v-html="markdown(conclusion.description)"></div>
+    <section class="answer conclusion show-after-interaction">
+      <div class="textgroup">
+        <div class="title"><h2 class="title">{{ conclusion.title }}</h2></div>
+        <div class="description a-text-only" v-html="markdown(conclusion.description)"></div>
+      </div>
     </section>
   </div><!-- end of app -->
   <footer></footer>

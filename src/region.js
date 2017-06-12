@@ -21,7 +21,7 @@ var mixinRegion = {
     raw: function(now) {
       var self = this;
       this.rows = this.raw.filter(function(row) {
-        return row.region == self.region.id;
+        return row.region == self.region.name;
       });
       this.draw();
     },
@@ -72,7 +72,7 @@ var mixinRegion = {
   },
   template: `
   <div class="region">
-    <div class="name">{{ region.name }}</div>
+    <div class="name">{{ region.translation }}</div>
     <div class="score"><span class="value">{{ score }}</span><span class="unit">%</span></div>
     <div class="draw" :class="{ debug: debug }">
       <svg :viewBox="viewBox"></svg>

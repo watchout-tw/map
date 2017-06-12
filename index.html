@@ -33,9 +33,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   <div id="app">
     <nav-bar-simple :channel="common.channels.musou"></nav-bar-simple>
-    <header class="textgroup">
-      <h1>{{ title }}</h1>
-      <div class="description" v-html="markdown(description)"></div>
+    <header>
+      <div class="textgroup">
+        <div class="title"><h1>{{ title }}</h1></div>
+        <div class="description" v-html="markdown(description)"></div>
+      </div>
     </header>
     <div class="pages d-flex flex-wrap">
       <a v-for="page in pages" :key="page.id" :href="page.id" class="page"><h2 class="list-item">{{ page.title }}</h2></a>

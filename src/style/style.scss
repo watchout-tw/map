@@ -3,6 +3,7 @@
 /* General */
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,18 +22,14 @@ body {
   font-size: 16px;
 }
 header {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  hgroup {
-    > h2 {
-      color: $color-musou;
-    }
-  }
-  .description {
-    margin: 1rem 0;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+}
+hgroup {
+  > h2 {
+    color: $color-musou;
   }
 }
-
 h1, h2 {
   line-height: 1.25em;
 }
@@ -40,14 +37,18 @@ h2.list-item {
   font-size: 1.5rem;
   margin: 0;
 }
-.textgroup {
-  max-width: 32rem;
-  width: auto;
-}
 figcaption {
   font-size: 0.75rem;
   margin: 0 0.25rem;
 }
+.title {
+  margin: 1rem 0;
+}
+.textgroup {
+  max-width: 32rem;
+  width: auto;
+}
+
 
 /* index page */
 
@@ -96,17 +97,16 @@ button {
   }
 }
 
-header, section {
-  margin-left: 1rem;
-  margin-right: 1rem;
+section {
+  box-sizing: content-box;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .question {
-  width: auto;
-  margin: 0 1rem;
   > .content {
-    margin: 0 auto 1rem;
-    max-width: 60rem;
+    margin-bottom: 2rem;
     > blockquote, > p {
       margin: 0 0 1rem;
     }
@@ -117,6 +117,10 @@ header, section {
         border-bottom-width: 4px;
       }
     }
+  }
+  > .explanation {
+    padding: 1rem;
+    background: rgba(black, 0.12);
   }
 }
 .interaction {
@@ -129,15 +133,14 @@ header, section {
       padding: 0;
       cursor: pointer;
 
-      > .index, > .value {
-        display: block;
-      }
       > .index {
+        display: block;
         font-family: $font-sans-serif;
         line-height: 1.25;
         margin-right: 0.25rem;
       }
       > .value {
+        display: block;
         line-height: 1;
       }
       &:hover, &.selected {
@@ -156,13 +159,6 @@ header, section {
   width: auto;
   margin-top: 4rem;
   margin-bottom: 4rem;
-}
-.title {
-  margin: 1rem 0;
-}
-.full-width {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .atlas {
@@ -260,6 +256,7 @@ header, section {
   > .region {
     width: 50%;
     max-width: 20rem;
+    margin-bottom: 1rem;
     @include bp-sm-up {
       width: 33.3333%;
     }
