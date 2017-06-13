@@ -101,20 +101,22 @@ section {
 .interaction {
   margin: 1rem 0;
   font-size: 1.75rem; }
-  .interaction.multiple-choice > ul > li {
-    margin: 0.25rem 1rem 0.25rem 0;
-    padding: 0;
-    cursor: pointer; }
-    .interaction.multiple-choice > ul > li > .index {
-      display: block;
-      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      line-height: 1.25;
-      margin-right: 0.25rem; }
-    .interaction.multiple-choice > ul > li > .value {
-      display: block;
-      line-height: 1; }
-    .interaction.multiple-choice > ul > li:hover, .interaction.multiple-choice > ul > li.selected {
-      color: #FF5368; }
+  .interaction.multiple-choice > ul {
+    margin-bottom: 1rem; }
+    .interaction.multiple-choice > ul > li {
+      margin: 0.25rem 1rem 0.25rem 0;
+      padding: 0;
+      cursor: pointer; }
+      .interaction.multiple-choice > ul > li > .index {
+        display: block;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1.25;
+        margin-right: 0.25rem; }
+      .interaction.multiple-choice > ul > li > .value {
+        display: block;
+        line-height: 1; }
+      .interaction.multiple-choice > ul > li:hover, .interaction.multiple-choice > ul > li.selected {
+        color: #FF5368; }
 
 .interaction-ongoing .show-after-interaction {
   visibility: hidden; }

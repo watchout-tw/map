@@ -25,7 +25,7 @@ var mixinCount = {
   template: `
   <div class="count">
     <div class="score"><span class="value">{{ score }}</span><span class="unit">%</span></div>
-    <div class="fraction"><span class="value">{{ this.rows.length }}/{{ this.total }}</span><span class="unit">篇報導</span></div>
+    <div class="fraction">{{ this.total }}篇裡有{{ this.rows.length }}篇</div>
     <div class="name">稱台灣為{{ count.name }}</div>
   </div>
   `

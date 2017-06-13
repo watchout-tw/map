@@ -129,23 +129,27 @@ section {
   font-size: 1.75rem;
 
   &.multiple-choice {
-    > ul > li {
-      margin: 0.25rem 1rem 0.25rem 0;
-      padding: 0;
-      cursor: pointer;
+    > ul {
+      margin-bottom: 1rem;
+      
+      > li {
+        margin: 0.25rem 1rem 0.25rem 0;
+        padding: 0;
+        cursor: pointer;
 
-      > .index {
-        display: block;
-        font-family: $font-sans-serif;
-        line-height: 1.25;
-        margin-right: 0.25rem;
-      }
-      > .value {
-        display: block;
-        line-height: 1;
-      }
-      &:hover, &.selected {
-        color: $color-musou;
+        > .index {
+          display: block;
+          font-family: $font-sans-serif;
+          line-height: 1.25;
+          margin-right: 0.25rem;
+        }
+        > .value {
+          display: block;
+          line-height: 1;
+        }
+        &:hover, &.selected {
+          color: $color-musou;
+        }
       }
     }
   }

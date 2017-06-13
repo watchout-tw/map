@@ -53,8 +53,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <ul class="list-unstyled d-flex flex-wrap">
             <li v-for="(option, index) in interaction.options" :id="'interaction-option-' + option.name" :key="option.name" @click="interactionSelectOption($event, index)" class="d-flex flex-row" :class="{selected: interaction.selection == index}"><div class="index">{{ circledDigits[index + 1] }}</div><div class="value">{{ option.name }}</div></li>
           </ul>
+          <button @click="interactionSubmit">{{ question.go }}</button>
         </div>
-        <button @click="interactionSubmit">交卷</button>
       </div>
       <div class="explanation textgroup show-after-interaction" v-html="markdown(question.conclusion)"></div>
     </section>
