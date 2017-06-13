@@ -182,7 +182,7 @@ section {
     .atlas-tally > .count > .score > .value {
       font-size: 4rem; }
     .atlas-tally > .count > .score > .unit {
-      margin-left: 0.25rem; }
+      margin-left: 0.125rem; }
   .atlas-tally > .count > .fraction {
     font-size: 0.85rem; }
 
