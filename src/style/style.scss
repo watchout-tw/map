@@ -49,7 +49,6 @@ figcaption {
   width: auto;
 }
 
-
 /* index page */
 
 .pages {
@@ -131,7 +130,7 @@ section {
   &.multiple-choice {
     > ul {
       margin-bottom: 1rem;
-      
+
       > li {
         margin: 0.25rem 1rem 0.25rem 0;
         padding: 0;
@@ -279,9 +278,12 @@ section {
     }
   }
 }
+
 .atlas-world {
-  margin-left: -1rem;
-  margin-right: -1rem;
+  @include bp-lg-alt-down {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
   > .draw {
     background: url(../asset/world_map_mercator-mod.jpg);
     background-size: cover;

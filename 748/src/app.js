@@ -19,20 +19,16 @@ var app = new Vue({
       class: 'selected',
       options: [
         {
-          name: 'country',
-          translation: '國家'
+          name: 'country'
         },
         {
-          name: 'nation',
-          translation: '民族'
+          name: 'nation'
         },
         {
-          name: 'state',
-          translation: '政權'
+          name: 'state'
         },
         {
-          name: 'place',
-          translation: '地方'
+          name: 'place'
         }
       ],
       selection: -1,
@@ -108,7 +104,7 @@ var app = new Vue({
       },
     ],
     question: {
-      introduction: '5月24日，大法官釋字第748號解釋出爐，世界各地媒體陸續報導「同性婚姻合法化，台灣將是亞洲第一」。有趣的是，或許是各界對台灣的國際地位了解不一，也可能是中國的「善意提醒」，各家媒體對台灣的稱呼並不一致。\n\n**如果你是編輯，這題克漏字，你怎麼選？**',
+      introduction: '5月24日，大法官釋字第748號解釋出爐，世界各地媒體陸續報導「同性婚姻合法化，台灣將是亞洲第一」。有趣的是，或許是各界對台灣的國際地位了解不一，也可能是中國的「善意提醒」，各家媒體對台灣的稱呼並不一致。\n\n**如果你是紐約時報的編輯，這題克漏字，你怎麼選？**',
       go: '選完點這裡',
       conclusion: '一般而言，country、nation、state都會翻譯為國家，但它們背後的意涵其實略有差異：country強調地理、邊境，nation強調民族及文化認同，state則強調政府治理權力的可及範圍。至於place呢？嗯⋯就只是個「地方」。'
     },
@@ -138,9 +134,6 @@ var app = new Vue({
     },
     interactionSelectedOption: function() {
       return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].name : '　　';
-    },
-    interactionSelectedOptionTranslation: function() {
-      return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].translation : '　　';
     }
   },
   watch: {

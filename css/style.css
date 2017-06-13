@@ -205,13 +205,14 @@ section {
   .atlas-regions > .region > .draw {
     margin: 0.5rem 0 1rem; }
 
-.atlas-world {
-  margin-left: -1rem;
-  margin-right: -1rem; }
-  .atlas-world > .draw {
-    background: url(../asset/world_map_mercator-mod.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
+@media (max-width: 960px) {
+  .atlas-world {
+    margin-left: -1rem;
+    margin-right: -1rem; } }
+.atlas-world > .draw {
+  background: url(../asset/world_map_mercator-mod.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 /*# sourceMappingURL=style.css.map */
