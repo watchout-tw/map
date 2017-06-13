@@ -80,6 +80,7 @@ button {
 
 section {
   box-sizing: content-box;
+  width: auto;
   max-width: 60rem;
   margin: 0 auto;
   padding: 0 1rem; }
