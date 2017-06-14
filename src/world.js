@@ -67,8 +67,8 @@ var mixinWorld = {
       circles.exit().remove();
       circles.enter().append('circle').merge(circles)
         .attr('class', 'center')
-        .attr('cx', d => d.x)
-        .attr('cy', d => d.y)
+        .attr('cx', function(d) { return d.x; })
+        .attr('cy', function(d) { return d.y; })
         .attr('r', 2)
     },
     group: function() {
@@ -110,8 +110,8 @@ var mixinWorld = {
       simulation.on('tick', function() {
         self.el.root.selectAll('g.quote').centerCenter();
         self.el.root.selectAll('circle.center')
-          .attr('cx', d => d.x)
-          .attr('cy', d => d.y)
+          .attr('cx', function(d) { return d.x; })
+          .attr('cy', function(d) { return d.y; })
       })
     },
     markdown: marked,
