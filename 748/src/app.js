@@ -106,7 +106,7 @@ var app = new Vue({
       }
     },
     header: {
-      title: '同志結婚會滅國？醒醒吧，你沒有＿＿',
+      title: '同志結婚會滅國？醒醒吧，你沒有____',
     },
     authorship: [
       {
