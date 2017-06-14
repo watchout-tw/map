@@ -133,7 +133,7 @@ var app = new Vue({
       },
       regions: {
         title: '世界六大區域怎麼稱呼台灣？',
-        description: '按媒體總部所在城市，《沃草》將蒐集到的報導分為六個區域：歐洲、亞洲、非洲、北美洲、中南美洲五個大陸區域及太平洋區域。我們發現太平洋區域及歐洲媒體最願意用<span class="country">國家代稱</span>來描述台灣，而亞洲、北美洲的媒體則是有半數以<span class="place">地方</span>（place）、<span class="place">島嶼</span>（island）、<span class="place">政府</span>（government）、<span class="place">民主政體</span>（democracy）這種不帶主權的<span class="place">中性名詞</span>稱呼台灣。'
+        description: '按媒體總部所在城市，《沃草》將蒐集到的報導分為六個區域：歐洲、亞洲、非洲、北美洲、中南美洲五個大陸區域及太平洋區域。我們發現太平洋區域及歐洲媒體最願意用<span class="country">國家代稱</span>來描述台灣，而在亞洲、北美洲及非洲則是有半數以<span class="place">地方</span>（place）、<span class="place">島嶼</span>（island）、<span class="place">政府</span>（government）、<span class="place">民主政體</span>（democracy）這種不帶主權的<span class="place">中性名詞</span>稱呼台灣。'
       },
       world: {
         title: '從世界看台灣意識、媒體識讀',
