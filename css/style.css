@@ -225,4 +225,16 @@ section {
   background-repeat: no-repeat;
   background-position: center; }
 
+span.country,
+span.place {
+  display: inline-block;
+  margin: 1px;
+  padding: 1px; }
+
+span.country {
+  background: rgba(80, 227, 194, 0.25); }
+
+span.place {
+  background: rgba(255, 83, 104, 0.25); }
+
 /*# sourceMappingURL=style.css.map */

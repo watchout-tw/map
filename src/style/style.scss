@@ -287,7 +287,6 @@ section {
     }
   }
 }
-
 .atlas-world {
   @include bp-lg-alt-down {
     margin-left: -1rem;
@@ -299,4 +298,17 @@ section {
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+
+span.country,
+span.place {
+  display: inline-block;
+  margin: 1px;
+  padding: 1px;
+}
+span.country {
+  background: rgba($color-watchout, 0.25);
+}
+span.place {
+  background: rgba($color-musou, 0.25);
 }
