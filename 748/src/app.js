@@ -146,9 +146,6 @@ var app = new Vue({
       return [ ...new Set(this.raw.map(function(row) {
         return row.contributor;
       })) ];
-    },
-    contributorList: function() {
-      return this.contributors
     }
   },
   watch: {
