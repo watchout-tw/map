@@ -57,7 +57,7 @@ var mixinWorld = {
       // draw center point of quotes
       var circles = this.el.root.selectAll('circle.center').data(this.rows);
       circles.exit().remove();
-      circles.enter().append('circle').merge(circles).attr('class', 'center').attr('cx', function(d) { return d.x; }).attr('cy', function(d) { return d.y; }).attr('r', 2);
+      circles.enter().append('circle').merge(circles).attr('class', 'center').attr('cx', d => d.x).attr('cy', d => d.y).attr('r', 2);
     },
     group: function () {
       var adjacency = [];
@@ -97,7 +97,7 @@ var mixinWorld = {
       simulation.nodes(this.rows);
       simulation.on('tick', function () {
         self.el.root.selectAll('g.quote').centerCenter();
-        self.el.root.selectAll('circle.center').attr('cx', function(d) { return d.x; }).attr('cy', function(d) { return d.y; });
+        self.el.root.selectAll('circle.center').attr('cx', d => d.x).attr('cy', d => d.y);
       });
     },
     markdown: marked
