@@ -108,7 +108,10 @@ var app = new Vue({
       go: '選完點這裡',
       conclusion: '一般而言，country、nation、state都會翻譯為國家，但它們背後的意涵其實略有差異：country強調地理、邊境，nation強調民族及文化認同，state則強調政府治理權力的可及範圍。至於place呢？嗯⋯就只是個「地方」。'
     },
-    sections: {
+    reminder: {
+      description: '克漏字沒填好的話，看不到我們精心製作的其他內容喔 😢',
+    },
+    graphs: {
       tally: {
         title: '台灣：「國家」還是「地方」？',
         description: '世界各國媒體到底如何看台灣呢？在大法官做出保障同性婚姻的憲法解釋後，《沃草》蒐集了<span val="data-tally-total"></span>篇各國媒體的相關報導，發現大約有六成用**國家代稱**來描述台灣，並有<span val="data-tally-country"></span>篇直接使用了country這個字，另外四成的報導則使用**地理名詞**，像是地方（place）或島嶼（island）。'
@@ -124,7 +127,11 @@ var app = new Vue({
     },
     conclusion: {
       title: '結論：#醒醒吧你沒有國家',
-      description: '從數字看來，全世界有四成的媒體不願意用**國家**來稱呼台灣。除了中國的打壓，我們對自己的定位認識是否足夠？\n\n據說台灣現在的**國名**叫做**中華民國**，但是全世界僅有極少數媒體會用**Republic of China**來描述這塊你我共同生活的島嶼。同性婚姻要落實，還需要立法院修法，而台灣的國家定位，也仍然需要全體台灣人民共同回答「我們應該如何定位自己？」這個問題。\n\n在沃草，我們持續以各種方式，**努力降低理解複雜議題的門檻**。像《<span val="data-title"></span>》這樣的資訊新聞需要許多人力整理資料、設計、製作，如果你喜歡沃草的內容，請別忘了[支持我們](https://watchout.tw/#support)！',
+      description: '從數字看來，全世界有四成的媒體不願意用**國家**來稱呼台灣。除了中國的打壓，我們對自己的定位認識是否足夠？\n\n據說台灣現在的**國名**叫做**中華民國**，但是全世界僅有極少數媒體會用**Republic of China**來描述這塊你我共同生活的島嶼。同性婚姻要落實，還需要立法院修法，而台灣的國家定位，也仍然需要全體台灣人民共同回答「我們應該如何定位自己？」這個問題。',
+    },
+    call_for_action: {
+      title: '你看到的外媒報導沒出現嗎？',
+      description: '由於人力、時間和語言能力的限制，我們目前只能蒐集到<span val="data-tally-total"></span>篇相關報導，你有看到其他的嗎？你可以[來這裡](https://watchout.tw/)填寫你所看到的新聞資料，沃草會在確認內容後更新網頁內容，並且將你列為貢獻者之一。\n\n在沃草，我們持續以各種方式，**努力降低理解複雜議題的門檻**。像《<span val="data-title"></span>》這樣的資訊新聞需要許多人力整理資料、設計、製作，如果你喜歡沃草的內容，請別忘了[支持我們](https://watchout.tw/#support)！',
     },
     debug: false,
   },
@@ -134,6 +141,14 @@ var app = new Vue({
     },
     interactionSelectedOption: function() {
       return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].name : '　　';
+    },
+    contributors: function() {
+      return [ ...new Set(this.raw.map(function(row) {
+        return row.contributor;
+      })) ];
+    },
+    contributorList: function() {
+      return this.contributors
     }
   },
   watch: {

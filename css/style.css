@@ -118,11 +118,21 @@ section {
       .interaction.multiple-choice > ul > li:hover, .interaction.multiple-choice > ul > li.selected {
         color: #FF5368; }
 
-.interaction-ongoing .show-after-interaction {
+.hidden {
   visibility: hidden; }
 
-.interaction-done .show-after-interaction {
-  visibility: visible; }
+.reminder {
+  box-sizing: content-box;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
+  width: 12rem;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border: 4px solid black;
+  border-radius: 2px;
+  background: white;
+  z-index: 990; }
 
 .answer {
   width: auto;

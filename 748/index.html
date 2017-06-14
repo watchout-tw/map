@@ -56,38 +56,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button @click="interactionSubmit">{{ question.go }}</button>
         </div>
       </div>
-      <div class="explanation textgroup show-after-interaction" v-html="markdown(question.conclusion)"></div>
+      <div class="explanation textgroup" :class="interaction.done ? 'visible' : 'hidden'" v-html="markdown(question.conclusion)"></div>
     </section>
-    <section class="answer graph show-after-interaction">
-      <div class="textgroup">
-        <div class="title"><h2>{{ sections.tally.title }}</h2></div>
-        <div class="description" v-html="markdown(sections.tally.description)"></div>
+    <section class="answer">
+      <div class="reminder" :class="interaction.done ? 'd-none' : 'd-block'">{{ reminder.description }}</div>
+      <div class="answer graph" :class="interaction.done ? 'visible' : 'hidden'">
+        <div class="textgroup">
+          <div class="title"><h2>{{ graphs.tally.title }}</h2></div>
+          <div class="description" v-html="markdown(graphs.tally.description)"></div>
+        </div>
+        <div class="atlas atlas-tally d-flex flex-wrap justify-content-around">
+          <count v-for="(count, id) of tally" :raw="raw" :count="count" :debug="debug" :key="id"></count>
+        </div>
       </div>
-      <div class="atlas atlas-tally d-flex flex-wrap justify-content-around">
-        <count v-for="(count, id) of tally" :raw="raw" :count="count" :debug="debug" :key="id"></count>
+      <div class="answer graph" :class="interaction.done ? 'visible' : 'hidden'">
+        <div class="textgroup">
+          <div class="title"><h2>{{ graphs.regions.title }}</h2></div>
+          <div class="description" v-html="markdown(graphs.regions.description)"></div>
+        </div>
+        <div class="atlas atlas-regions d-flex flex-wrap">
+          <region v-for="(region, id) of regions" :raw="raw" :region="region" :debug="debug" :key="id"></region>
+        </div>
+      </div>
+      <div class="answer graph" :class="interaction.done ? 'visible' : 'hidden'">
+        <div class="textgroup">
+          <div class="title"><h2>{{ graphs.world.title }}</h2></div>
+          <div class="description" v-html="markdown(graphs.world.description)"></div>
+        </div>
+        <world :raw="raw" :debug="debug"></world>
+      </div>
+      <div class="answer conclusion" :class="interaction.done ? 'visible' : 'hidden'">
+        <div class="textgroup">
+          <div class="title"><h2 class="title">{{ conclusion.title }}</h2></div>
+          <div class="description a-text-only" v-html="markdown(conclusion.description)"></div>
+        </div>
       </div>
     </section>
-    <section class="answer graph show-after-interaction">
+    <section class="call">
       <div class="textgroup">
-        <div class="title"><h2>{{ sections.regions.title }}</h2></div>
-        <div class="description" v-html="markdown(sections.regions.description)"></div>
-      </div>
-      <div class="atlas atlas-regions d-flex flex-wrap">
-        <region v-for="(region, id) of regions" :raw="raw" :region="region" :debug="debug" :key="id"></region>
+        <div class="title"><h2 class="title">{{ call_for_action.title }}</h2></div>
+        <div class="description a-text-only" v-html="markdown(call_for_action.description)"></div>
       </div>
     </section>
-    <section class="answer graph show-after-interaction">
-      <div class="textgroup">
-        <div class="title"><h2>{{ sections.world.title }}</h2></div>
-        <div class="description" v-html="markdown(sections.world.description)"></div>
-      </div>
-      <world :raw="raw" :debug="debug"></world>
-    </section>
-    <section class="answer conclusion show-after-interaction">
-      <div class="textgroup">
-        <div class="title"><h2 class="title">{{ conclusion.title }}</h2></div>
-        <div class="description a-text-only" v-html="markdown(conclusion.description)"></div>
-      </div>
+    <section class="license">
+      <div>貢獻者：{{ contributorList }}</div>
     </section>
   </div><!-- end of app -->
   <footer></footer>
