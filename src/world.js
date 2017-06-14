@@ -124,9 +124,6 @@ var mixinWorld = {
   `,
 }
 
-Array.prototype.union = function(other) {
-  return [...new Set([...this, ...other])];
-}
 function areIntersecting(a, b) {
   return (
     a.left <= b.right &&

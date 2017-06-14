@@ -1,3 +1,17 @@
+function unique(a) {
+  var seen = {};
+  var out = [];
+  var len = a.length;
+  var j = 0;
+  for(var i = 0; i < len; i++) {
+    var item = a[i];
+    if(seen[item] !== 1) {
+      seen[item] = 1;
+      out[j++] = item;
+    }
+  }
+  return out;
+}
 Vue.component('count', {
   mixins: [mixinCount],
 });
@@ -147,9 +161,9 @@ var app = new Vue({
       return this.interaction.selection > -1 ? this.interaction.options[this.interaction.selection].name : '　　';
     },
     contributors: function() {
-      return [ ...new Set(this.raw.map(function(row) {
+      return unique(this.raw.map(function(row) {
         return row.contributor;
-      })) ];
+      }));
     }
   },
   watch: {

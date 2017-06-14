@@ -1,3 +1,5 @@
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var mixinWorld = {
   data: function () {
     return {
@@ -13,7 +15,7 @@ var mixinWorld = {
       var self = this;
       this.rows = now.map(function (row) {
         var pos = self.util.projection([row.lng, row.lat]);
-        return Object.assign(row, {
+        return _extends(row, {
           x: pos[0],
           y: pos[1]
         });
@@ -57,7 +59,11 @@ var mixinWorld = {
       // draw center point of quotes
       var circles = this.el.root.selectAll('circle.center').data(this.rows);
       circles.exit().remove();
-      circles.enter().append('circle').merge(circles).attr('class', 'center').attr('cx', d => d.x).attr('cy', d => d.y).attr('r', 2);
+      circles.enter().append('circle').merge(circles).attr('class', 'center').attr('cx', function (d) {
+        return d.x;
+      }).attr('cy', function (d) {
+        return d.y;
+      }).attr('r', 2);
     },
     group: function () {
       var adjacency = [];
@@ -97,7 +103,11 @@ var mixinWorld = {
       simulation.nodes(this.rows);
       simulation.on('tick', function () {
         self.el.root.selectAll('g.quote').centerCenter();
-        self.el.root.selectAll('circle.center').attr('cx', d => d.x).attr('cy', d => d.y);
+        self.el.root.selectAll('circle.center').attr('cx', function (d) {
+          return d.x;
+        }).attr('cy', function (d) {
+          return d.y;
+        });
       });
     },
     markdown: marked
@@ -105,9 +115,6 @@ var mixinWorld = {
   template: '<div class="atlas atlas-world"><div class="draw"></div><figcaption><a class="a-text" href="https://s-media-cache-ak0.pinimg.com/originals/a4/dc/b3/a4dcb30b0ba3b5e26cc5b6788b98c625.jpg" target="_blank">Image Source</a></figcaption></div>'
 };
 
-Array.prototype.union = function (other) {
-  return [...new Set([...this, ...other])];
-};
 function areIntersecting(a, b) {
   return a.left <= b.right && b.left <= a.right && a.top <= b.bottom && b.top <= a.bottom;
 }
